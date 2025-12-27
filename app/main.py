@@ -1,11 +1,15 @@
 import os
 import time
+from datetime import datetime
+
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from .guardrails import check_injection
+from .guardrails import guard_input,scrub_output
 from openai import OpenAI
-
+from .logging import logger
+from .tools import TOOLS,lookup_diseases
+from langdetect import detect
 load_dotenv()
 
 # --- CONFIG ---
@@ -18,7 +22,7 @@ client = OpenAI(api_key=GROQ_API_KEY, base_url=GROQ_BASE_URL)
 app = FastAPI(title="Groq Hosted Model API")
 
 
-# --- REQUEST SCHEMA ---
+
 class AskRequest(BaseModel):
     symptoms: str
     k: int = 3
@@ -26,27 +30,43 @@ class AskRequest(BaseModel):
     use_functions: bool = False
 
 
-# --- CHAT FUNCTION ---
-def chat_once(prompt: str,
-              system: str = "You are a medical assistant, get 3 possible illnesses based on symptoms, pattern: illness,illness,illness"):
+from openai import OpenAI
+
+client = OpenAI(api_key=GROQ_API_KEY, base_url=GROQ_BASE_URL)
+
+
+def chat_once(symptoms: str, use_functions: bool = True):
+    system_prompt = """
+Jestes asystentem medycznym. Podaj 3 najprawdopodobniejsze choroby na podstawie objawów.
+Zawsze używaj nazw symptomów w języku angielskim.
+Format odpowiedzi: illness,illness,illness.
+"""
     t0 = time.time()
+
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": prompt}
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": symptoms}
         ],
         max_tokens=512,
-        temperature=0.7
+        temperature=0.7,
+        functions=TOOLS if use_functions else None,
+        function_call="auto" if use_functions else "none"
     )
-    dt = time.time() - t0
+
     choice = response.choices[0]
-    return {
-        "text": choice.message.content,
-        "finish_reason": choice.finish_reason,
-        "latency_s": round(dt, 3),
-        "usage": getattr(response, "usage", None) and response.usage.model_dump()
-    }
+
+    if getattr(choice.message, "function_call", None):
+        symptoms_list = [s.strip().lower() for s in symptoms.split(",")]
+        diseases_list = lookup_diseases(symptoms_list, top_k=3)
+        text_output = ", ".join(diseases_list)
+    else:
+        text_output = getattr(choice.message, "content", "")
+
+    dt = time.time() - t0
+
+    return {"text": text_output, "latency_s": round(dt, 3)}
 
 
 # --- ENDPOINTS ---
@@ -57,16 +77,30 @@ def root():
 
 @app.post("/ask")
 def ask(request: AskRequest):
-    # Guardrails
-    check_injection(request.symptoms)
+    start_time = datetime.now()
 
-    # Mode validation
-    if request.mode not in ["api", "local"]:
-        raise HTTPException(status_code=400, detail="Invalid mode, choose 'api' or 'local'")
+    safe_symptoms = guard_input(request.symptoms)
 
-    # Call model (here only API)
-    result = chat_once(request.symptoms)
-    return {
-        "response": result.get("text"),
-        "latency_s": result.get("latency_s")
-    }
+    try:
+        lang = detect(safe_symptoms)
+        use_functions = True if lang == "en" else False
+
+        result = chat_once(safe_symptoms, use_functions=use_functions)
+
+        logger.info(f"{start_time} | tool=chat_once | status=OK | latency_s={result['latency_s']:.3f}")
+
+        illnesses = scrub_output(result["text"]) if result["text"] else []
+
+        return {
+            "illnesses": illnesses,
+            "latency_s": result["latency_s"]
+        }
+
+
+    except HTTPException as e:
+        logger.error(f"{start_time} | tool=chat_once | status=ERROR | code={e.status_code} | detail={e.detail}")
+        raise
+
+    except Exception as e:
+        logger.error(f"{start_time} | tool=chat_once | status=ERROR | detail={str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")

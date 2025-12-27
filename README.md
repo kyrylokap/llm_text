@@ -13,7 +13,7 @@
    GROQ_API_KEY=twoj_klucz
 
 ## Uruchomienie
-uvicorn app:app --reload
+uvicorn app.main:app --reload 
 
 ## Testowanie
 curl -X POST http://127.0.0.1:8000/ask \

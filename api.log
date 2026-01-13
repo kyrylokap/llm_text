@@ -1,0 +1,283 @@
+2025-12-27 13:07:23,187 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:07:23,191 | INFO | 2025-12-27 13:07:22.027682 | tool=chat_once | status=OK | latency_s=0.875
+2025-12-27 13:07:23,191 | ERROR | 2025-12-27 13:07:22.027682 | tool=chat_once | status=ERROR | detail=No valid items found in output
+2025-12-27 13:07:41,464 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:07:41,466 | INFO | 2025-12-27 13:07:41.022683 | tool=chat_once | status=OK | latency_s=0.442
+2025-12-27 13:09:14,715 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:09:14,720 | INFO | 2025-12-27 13:09:13.807285 | tool=chat_once | status=OK | latency_s=0.722
+2025-12-27 13:09:17,125 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:09:17,126 | INFO | 2025-12-27 13:09:16.757280 | tool=chat_once | status=OK | latency_s=0.366
+2025-12-27 13:09:19,206 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:09:19,206 | INFO | 2025-12-27 13:09:18.948604 | tool=chat_once | status=OK | latency_s=0.253
+2025-12-27 13:09:20,461 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:09:20,461 | INFO | 2025-12-27 13:09:20.141823 | tool=chat_once | status=OK | latency_s=0.317
+2025-12-27 13:09:32,909 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:09:32,910 | INFO | 2025-12-27 13:09:32.476471 | tool=chat_once | status=OK | latency_s=0.422
+2025-12-27 13:10:04,331 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:10:04,339 | INFO | 2025-12-27 13:10:02.979640 | tool=chat_once | status=OK | latency_s=1.061
+2025-12-27 13:10:13,757 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:10:13,757 | INFO | 2025-12-27 13:10:13.059830 | tool=chat_once | status=OK | latency_s=0.696
+2025-12-27 13:10:31,673 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:10:31,673 | INFO | 2025-12-27 13:10:30.916142 | tool=chat_once | status=OK | latency_s=0.753
+2025-12-27 13:10:36,177 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:10:36,178 | INFO | 2025-12-27 13:10:35.587396 | tool=chat_once | status=OK | latency_s=0.588
+2025-12-27 13:10:39,024 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 13:10:39,024 | INFO | 2025-12-27 13:10:38.499519 | tool=chat_once | status=OK | latency_s=0.522
+2025-12-29 18:15:33,395 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:15:33,401 | INFO | 2025-12-29 18:15:31.262127 | tool=chat_once | status=OK | latency_s=1.249
+2025-12-29 18:15:37,259 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:15:37,259 | INFO | 2025-12-29 18:15:37.019421 | tool=chat_once | status=OK | latency_s=0.238
+2025-12-29 18:15:47,682 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:15:47,685 | INFO | 2025-12-29 18:15:47.334263 | tool=chat_once | status=OK | latency_s=0.347
+2025-12-29 18:15:50,532 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:15:50,533 | INFO | 2025-12-29 18:15:50.228052 | tool=chat_once | status=OK | latency_s=0.304
+2025-12-29 18:15:52,493 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:15:52,493 | INFO | 2025-12-29 18:15:51.884956 | tool=chat_once | status=OK | latency_s=0.607
+2025-12-29 18:16:37,679 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:16:37,679 | INFO | 2025-12-29 18:16:36.931309 | tool=chat_once | status=OK | latency_s=0.731
+2025-12-29 18:16:39,777 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:16:39,777 | INFO | 2025-12-29 18:16:39.114155 | tool=chat_once | status=OK | latency_s=0.646
+2025-12-29 18:16:42,496 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 18:16:42,497 | INFO | 2025-12-29 18:16:41.858376 | tool=chat_once | status=OK | latency_s=0.619
+2026-01-03 10:58:04,207 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 10:58:04,216 | INFO | 2026-01-03 10:58:02.812499 | tool=chat_once | status=OK | latency_s=1.111
+2026-01-03 11:07:30,201 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:07:30,204 | INFO | 2026-01-03 11:07:29.055323 | tool=chat_once | status=OK | latency_s=0.851
+2026-01-03 11:07:45,259 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:07:45,263 | INFO | 2026-01-03 11:07:44.667477 | tool=chat_once | status=OK | latency_s=0.595
+2026-01-03 11:08:01,645 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:08:01,645 | INFO | 2026-01-03 11:08:01.217982 | tool=chat_once | status=OK | latency_s=0.424
+2026-01-03 11:19:24,838 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:19:24,841 | ERROR | 2026-01-03 11:19:23.668557 | category=tool_error | detail=Empty model output
+2026-01-03 11:20:07,440 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:20:14,725 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:20:33,169 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:20:33,169 | ERROR | 2026-01-03 11:20:32.566222 | category=tool_error | detail=Empty model output
+2026-01-03 11:20:34,910 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:20:37,444 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:20:37,447 | ERROR | 2026-01-03 11:20:37.069957 | category=tool_error | detail=Empty model output
+2026-01-03 11:20:47,380 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:20:47,380 | ERROR | 2026-01-03 11:20:46.909930 | category=tool_error | detail=Empty model output
+2026-01-03 11:20:49,033 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:20:49,041 | ERROR | 2026-01-03 11:20:48.646866 | category=tool_error | detail=Empty model output
+2026-01-03 11:20:50,041 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:21:30,750 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:21:30,754 | ERROR | 2026-01-03 11:21:30.279946 | category=tool_error | detail=Empty model output
+2026-01-03 11:28:34,993 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:28:55,528 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:28:57,680 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:29:08,138 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:29:08,139 | ERROR | 2026-01-03 11:29:07.637419 | category=tool_error | detail=Empty model output
+2026-01-03 11:29:10,235 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:29:13,131 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:29:13,134 | ERROR | 2026-01-03 11:29:12.738988 | category=tool_error | detail=Empty model output
+2026-01-03 11:29:14,446 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:29:15,701 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:29:15,701 | ERROR | 2026-01-03 11:29:15.291461 | category=tool_error | detail=Empty model output
+2026-01-03 11:29:16,957 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:29:16,958 | ERROR | 2026-01-03 11:29:16.523495 | category=tool_error | detail=Empty model output
+2026-01-03 11:29:17,943 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:40:54,949 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:41:03,115 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:41:16,236 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:41:31,255 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:41:34,869 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:41:44,894 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:41:46,756 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:41:59,586 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:00,305 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:00,305 | ERROR | 2026-01-03 11:41:58.945037 | category=tool_error | detail=Empty model output
+2026-01-03 11:42:02,464 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:03,089 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:06,822 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:07,471 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:08,747 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:09,388 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:10,547 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:11,174 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:25,894 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:26,566 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:32,861 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:38,107 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:42:38,693 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:43:11,962 | CRITICAL | 2026-01-03 11:43:11.961799 | category=internal_error | detail=No features in text.
+2026-01-03 11:43:13,841 | CRITICAL | 2026-01-03 11:43:13.841278 | category=internal_error | detail=No features in text.
+2026-01-03 11:43:50,089 | CRITICAL | 2026-01-03 11:43:50.089430 | category=internal_error | detail=400: Path traversal detected
+2026-01-03 11:45:19,554 | CRITICAL | 2026-01-03 11:45:19.554975 | category=internal_error | detail=400: Path traversal detected
+2026-01-03 11:45:21,416 | CRITICAL | 2026-01-03 11:45:21.416076 | category=internal_error | detail=400: Path traversal detected
+2026-01-03 11:45:21,975 | CRITICAL | 2026-01-03 11:45:21.975047 | category=internal_error | detail=400: Path traversal detected
+2026-01-03 11:45:22,487 | CRITICAL | 2026-01-03 11:45:22.487301 | category=internal_error | detail=400: Path traversal detected
+2026-01-03 11:46:25,902 | WARNING | 2026-01-03 11:46:25.902578 | category=security_blocked | code=400 | detail=Path traversal detected
+2026-01-03 11:46:28,359 | WARNING | 2026-01-03 11:46:28.359610 | category=security_blocked | code=400 | detail=Path traversal detected
+2026-01-03 11:48:34,652 | WARNING | 2026-01-03 11:48:34.652688 | category=security_blocked | code=400 | detail=Path traversal detected
+2026-01-03 11:48:39,566 | WARNING | 2026-01-03 11:48:39.566624 | category=security_blocked | code=400 | detail=Path traversal detected
+2026-01-03 11:48:57,120 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:48:57,843 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:55:36,942 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:55:40,568 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:57:36,934 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:57:41,401 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 11:57:47,690 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:00:04,695 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:00:05,387 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:00:05,393 | ERROR | 2026-01-03 12:00:03.611957 | category=tool_error | detail=Empty model output
+2026-01-03 12:00:09,018 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:00:15,429 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:00:18,936 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:00:21,324 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:03:08,889 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:07:57,118 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:08:07,304 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:08:14,376 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:08:32,244 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:11:18,515 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:11:31,076 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:13:39,947 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:13:47,958 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:13:52,778 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:13:58,986 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:13:59,663 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:13:59,663 | ERROR | 2026-01-03 12:13:58.520642 | category=tool_error | detail=Empty model output
+2026-01-03 12:14:04,024 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:14:15,380 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:14:16,186 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:51:34,124 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:51:34,641 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:51:34,641 | ERROR | 2026-01-03 12:51:33.281072 | category=tool_error | detail=Empty model output
+2026-01-03 12:51:46,213 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:51:46,667 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:51:46,667 | ERROR | 2026-01-03 12:51:45.992048 | category=tool_error | detail=Empty model output
+2026-01-03 12:51:58,692 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:51:59,386 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:51:59,393 | ERROR | 2026-01-03 12:51:58.407922 | category=tool_error | detail=Empty model output
+2026-01-03 12:53:05,155 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:53:05,623 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:53:05,623 | ERROR | 2026-01-03 12:53:04.905388 | category=tool_error | detail=Empty model output
+2026-01-03 12:53:08,231 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:53:08,689 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:53:08,689 | ERROR | 2026-01-03 12:53:08.070513 | category=tool_error | detail=Empty model output
+2026-01-03 12:54:49,856 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:54:50,437 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:54:50,437 | ERROR | 2026-01-03 12:54:48.899119 | category=tool_error | detail=Empty model output
+2026-01-03 12:54:52,626 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:54:53,197 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:54:53,197 | ERROR | 2026-01-03 12:54:52.351410 | category=tool_error | detail=Empty model output
+2026-01-03 12:54:55,022 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:54:55,652 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:56:49,914 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:56:50,621 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:56:59,095 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:05,280 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:06,031 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:06,031 | ERROR | 2026-01-03 12:57:04.790756 | category=tool_error | detail=Empty model output
+2026-01-03 12:57:08,273 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:08,996 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:08,996 | ERROR | 2026-01-03 12:57:07.622448 | category=tool_error | detail=Empty model output
+2026-01-03 12:57:13,280 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:14,012 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:14,012 | ERROR | 2026-01-03 12:57:12.831236 | category=tool_error | detail=Empty model output
+2026-01-03 12:57:20,756 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:36,066 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:40,524 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:47,607 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:48,362 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 12:57:48,362 | ERROR | 2026-01-03 12:57:47.054361 | category=tool_error | detail=Empty model output
+2026-01-03 12:57:54,355 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:00:17,246 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:00:17,254 | ERROR | 2026-01-03 13:00:16.233734 | category=tool_error | detail=Logger.log() missing 1 required positional argument: 'msg'
+2026-01-03 13:02:03,967 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:02:03,973 | ERROR | 2026-01-03 13:02:02.967290 | category=tool_error | detail=Logger.log() missing 1 required positional argument: 'msg'
+2026-01-03 13:04:01,492 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:04:01,500 | ERROR | 2026-01-03 13:04:00.491533 | category=tool_error | detail=Logger.log() missing 1 required positional argument: 'level'
+2026-01-03 13:05:24,260 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:05:24,994 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:05:33,232 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:06:41,946 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:08:00,283 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:08:01,061 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:08:01,061 | INFO | 1767442080.5874226 | category=api_llm | latency_s=0.474 | msg=ChatCompletion(id='chatcmpl-38196274-53e2-4209-be61-d3143f8a5208', choices=[Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='We have a conversation. The user says: "kaszel, bol gardla, rak". They want "3 najprawdopodobniejsze choroby" based on symptoms. Format answer: "choroba,choroba,choroba." So we need to give three most likely diseases given the symptoms: cough, sore throat, cancer? "rak" means cancer. So they list "cancer" as a symptom? They might be saying "cancer" as a symptom? That is weird. They might be indicating that they suspect cancer. They want three likely diseases. But we have to be careful: medical advice. According to policy, we can provide general medical information but not diagnosing. We can provide general info. It\'s not a medical diagnosis. The user is basically asking for likely diseases. We can provide a list of conditions that could present with cough and sore throat and could be cancer? Possibly laryngeal cancer, throat cancer, or other. But we need to be careful: we should not provide a definitive diagnosis. We can provide general info: e.g., laryngeal carcinoma, pharyngitis, tonsillitis, etc. But we must comply with policy: It\'s not disallowed. It\'s medical advice? It\'s a general question. It\'s allowed. We can give general info. But we must not claim to diagnose. We can say "Possible conditions: laryngeal carcinoma, pharyngitis, tonsillitis." We need to'))], created=1767442073, model='openai/gpt-oss-20b', object='chat.completion', service_tier='on_demand', system_fingerprint='fp_e189667b30', usage=CompletionUsage(completion_tokens=300, prompt_tokens=124, total_tokens=424, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=None, reasoning_tokens=298, rejected_prediction_tokens=None), prompt_tokens_details=None, queue_time=0.084010103, prompt_time=0.008757368, completion_time=0.333615842, total_time=0.34237321), usage_breakdown=None, x_groq={'id': 'req_01ke1w3hz3e7h95wax3w4fvt5e', 'seed': 1660852699})
+2026-01-03 13:08:01,061 | ERROR | 2026-01-03 13:07:59.772582 | category=tool_error | detail=Empty model output
+2026-01-03 13:09:07,288 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:09:20,659 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:09:21,420 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:09:21,435 | ERROR | 2026-01-03 13:09:20.177936 | category=tool_error | detail=Empty model output
+2026-01-03 13:09:30,212 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 13:15:41,043 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:33:55,352 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:33:55,359 | INFO | 1767893634.5466995 | category=api_llm | latency_s=0.813 | msg=ChatCompletion(id='chatcmpl-b051c350-5e9f-4f84-9549-7824ee40d7b9', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='migraine,tension-type headache,cluster headache', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='We need to respond as medical assistant. The user says "boli mnie glowa" meaning "I have a headache". They want 3 most probable diseases based on symptoms. Only symptom is headache. So we can propose: Migraine, tension-type headache, sinusitis or cluster headache. But we need 3 diseases. Provide as "migraine,tension headache,sinusitis" or "migraine,cluster headache,tension-type headache". Let\'s choose: Migraine, Tension-type headache, Cluster headache. Provide as comma-separated. No other explanation.'))], created=1767893635, model='openai/gpt-oss-20b', object='chat.completion', service_tier='on_demand', system_fingerprint='fp_feb9b278f1', usage=CompletionUsage(completion_tokens=132, prompt_tokens=121, total_tokens=253, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=None, reasoning_tokens=114, rejected_prediction_tokens=None), prompt_tokens_details=None, queue_time=0.042007742, prompt_time=0.007481885, completion_time=0.16326443, total_time=0.170746315), usage_breakdown=None, x_groq={'id': 'req_01kefar3yfftbtr83g1b5tttkt', 'seed': 426183668})
+2026-01-08 18:34:07,256 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:08,122 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:08,129 | ERROR | 2026-01-08 18:34:06.739278 | category=tool_error | detail=Empty model output
+2026-01-08 18:34:10,476 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:11,421 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:11,428 | ERROR | 2026-01-08 18:34:10.027010 | category=tool_error | detail=Empty model output
+2026-01-08 18:34:13,724 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:14,455 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:14,455 | ERROR | 2026-01-08 18:34:13.282273 | category=tool_error | detail=Empty model output
+2026-01-08 18:34:30,798 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:30,802 | INFO | 1767893670.2888877 | category=api_llm | latency_s=0.514 | msg=ChatCompletion(id='chatcmpl-1df5f5be-1f65-4ccf-9205-64fca59e29f8', choices=[Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='The user wrote in Polish: "boli mnie ass". That seems incomplete. "boli mnie" means "it hurts me". "ass" might be a typo? Could be "ass" meaning "ass" in English? Or "ass" could be "as" or "ass"? The user likely means "boli mnie [something]" but they wrote "ass". Maybe they want to know what disease might cause pain in the butt? "Ass" could refer to the buttocks. So "boli mnie ass" could mean "it hurts my butt". So we need to provide 3 most likely diseases based on symptoms. But we only have one symptom: butt pain. That is too vague. We could interpret as "pain in the butt" which could be due to various causes: sciatica, piriformis syndrome, gluteal strain, gluteal abscess, etc. But we should ask for more symptoms. However the instruction says to provide 3 most likely diseases based on symptoms. We only have one symptom. We can provide general possibilities. But we must comply with medical assistant guidelines: We can provide general info but not diagnosis. We should provide a disclaimer. According to policy, we can provide general info but not diagnosing. But the instruction says to output 3 diseases. We can interpret as "possible conditions". So we can provide a list: "Sciatica, Piriformis syndrome, Gluteal strain". Format'))], created=1767893670, model='openai/gpt-oss-20b', object='chat.completion', service_tier='on_demand', system_fingerprint='fp_feb9b278f1', usage=CompletionUsage(completion_tokens=300, prompt_tokens=120, total_tokens=420, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=None, reasoning_tokens=298, rejected_prediction_tokens=None), prompt_tokens_details=None, queue_time=0.041698855, prompt_time=0.005716704, completion_time=0.328471139, total_time=0.334187843), usage_breakdown=None, x_groq={'id': 'req_01kefas6d1e42bkqbhxs9q7n0e', 'seed': 2096455626})
+2026-01-08 18:34:31,526 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:34:31,532 | ERROR | 2026-01-08 18:34:30.284242 | category=tool_error | detail=Empty model output
+2026-01-08 18:36:29,278 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:36:29,833 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 18:45:10,605 | INFO | Loading faiss with AVX2 support.
+2026-01-08 18:45:10,796 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 18:45:10,960 | INFO | Use pytorch device_name: cpu
+2026-01-08 18:45:10,960 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 18:45:12,837 | WARNING | Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-01-08 18:45:32,708 | CRITICAL | 2026-01-08 18:45:31.689212 | category=internal_error | detail=list index out of range
+2026-01-08 18:45:46,416 | CRITICAL | 2026-01-08 18:45:46.400499 | category=internal_error | detail=list index out of range
+2026-01-08 18:47:52,916 | INFO | Loading faiss with AVX2 support.
+2026-01-08 18:47:52,938 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 18:47:53,103 | INFO | Use pytorch device_name: cpu
+2026-01-08 18:47:53,103 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 18:48:05,177 | INFO | Loading faiss with AVX2 support.
+2026-01-08 18:48:05,195 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 18:48:05,387 | INFO | Use pytorch device_name: cpu
+2026-01-08 18:48:05,387 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 18:55:39,372 | INFO | Loading faiss with AVX2 support.
+2026-01-08 18:55:39,388 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 18:55:39,516 | INFO | Use pytorch device_name: cpu
+2026-01-08 18:55:39,516 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 18:55:51,401 | INFO | Loading faiss with AVX2 support.
+2026-01-08 18:55:51,417 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 18:55:51,533 | INFO | Use pytorch device_name: cpu
+2026-01-08 18:55:51,533 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 19:16:59,241 | INFO | Loading faiss with AVX2 support.
+2026-01-08 19:16:59,304 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 19:16:59,840 | INFO | Use pytorch device_name: cpu
+2026-01-08 19:16:59,840 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 19:17:12,621 | INFO | Loading faiss with AVX2 support.
+2026-01-08 19:17:12,643 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 19:17:13,080 | INFO | Use pytorch device_name: cpu
+2026-01-08 19:17:13,080 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 19:18:22,665 | INFO | Loading faiss with AVX2 support.
+2026-01-08 19:18:22,685 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 19:18:23,121 | INFO | Use pytorch device_name: cpu
+2026-01-08 19:18:23,121 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 19:18:44,915 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:18:54,163 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:25:09,494 | INFO | Loading faiss with AVX2 support.
+2026-01-08 19:25:09,526 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 19:25:10,438 | INFO | Use pytorch device_name: cpu
+2026-01-08 19:25:10,438 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 19:25:17,551 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:25:34,257 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:25:43,547 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:25:48,533 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:26:47,915 | INFO | Loading faiss with AVX2 support.
+2026-01-08 19:26:47,935 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 19:26:48,377 | INFO | Use pytorch device_name: cpu
+2026-01-08 19:26:48,379 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 19:27:03,236 | INFO | Loading faiss with AVX2 support.
+2026-01-08 19:27:03,252 | INFO | Successfully loaded faiss with AVX2 support.
+2026-01-08 19:27:03,964 | INFO | Use pytorch device_name: cpu
+2026-01-08 19:27:03,964 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-08 19:27:17,110 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:27:30,148 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:27:40,606 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:27:52,405 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:28:02,155 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:28:13,335 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:28:25,022 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-08 19:28:37,242 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

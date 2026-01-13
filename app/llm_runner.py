@@ -5,7 +5,7 @@ from openai import OpenAI
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 from .errors import ToolError, EmptyModelOutput
-from .prompts import MEDICAL_PROMPT, GREETING_PROMPT
+from .prompts import MEDICAL_PROMPT
 from .tools import TOOLS
 from .dispatcher import execute_tool
 from .rag import MiniRAG
@@ -19,7 +19,6 @@ client = OpenAI(
 
 MODEL_NAME = os.getenv("MODEL_NAME")
 
-# ===== LOCAL MODEL =====
 LOCAL_MODEL_NAME = "EleutherAI/gpt-neo-125M"
 tokenizer = AutoTokenizer.from_pretrained(LOCAL_MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(LOCAL_MODEL_NAME)
@@ -30,13 +29,11 @@ local_gen = pipeline(
     device=-1
 )
 
-# ===== RAG INIT =====
 rag = MiniRAG()
 
-# 🔥 TUTAJ ŁADUJESZ CSV 🔥
 rag.load_csv(
-    path="medical_rag_pubmed.csv",     # ← TWÓJ PLIK
-    text_columns=["text"],            # ← KOLUMNA Z TREŚCIĄ
+    path="medical_rag_pubmed.csv",
+    text_columns=["text"],
 )
 
 print(f"[RAG] Loaded {rag.index.ntotal} documents")
@@ -54,15 +51,14 @@ def run_with_retry_chat(symptoms, **kwargs):
 
 
 def chat_once(symptoms, use_functions=True, mode="medical", api_mode="api"):
-    prompt = GREETING_PROMPT if mode == "greeting" else MEDICAL_PROMPT
 
     context = []
     if mode == "medical":
         context = rag.query(symptoms)
 
-    full_prompt = prompt
+    full_prompt = MEDICAL_PROMPT
     if context:
-        full_prompt += "\nKontekst:\n" + "\n".join(context)
+        full_prompt += "\nContext:\n" + "\n".join(context)
     full_prompt += "\n" + symptoms
 
     t0 = time.time()
@@ -85,7 +81,7 @@ def chat_once(symptoms, use_functions=True, mode="medical", api_mode="api"):
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
-            {"role": "system", "content": prompt},
+            {"role": "system", "content": MEDICAL_PROMPT},
             {"role": "user", "content": symptoms},
         ],
         functions=[TOOLS[t]["openai_schema"] for t in TOOLS] if use_functions else None,
@@ -95,7 +91,6 @@ def chat_once(symptoms, use_functions=True, mode="medical", api_mode="api"):
 
     msg = response.choices[0].message
 
-    # ===== FUNCTION CALL =====
     if msg.function_call:
         name = msg.function_call.name
         args = eval(msg.function_call.arguments)
@@ -107,5 +102,5 @@ def chat_once(symptoms, use_functions=True, mode="medical", api_mode="api"):
 
     if not msg.content:
         raise EmptyModelOutput()
-
+    print(msg.content)
     return {"text": msg.content.strip(), "latency_s": round(time.time() - t0, 3)}

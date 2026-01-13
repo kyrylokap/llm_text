@@ -1,10 +1,8 @@
 
-from .errors import ToolError, ToolTimeout, EmptyModelOutput
-from datetime import datetime
+from .errors import ToolError, ToolTimeout
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from .guardrails import guard_input,scrub_output, is_greeting
-from .app_logging import logger
+from .guardrails import guard_input,scrub_output
 from .llm_runner import run_with_retry_chat
 from langdetect import detect
 from .errors import (
@@ -27,52 +25,27 @@ def root():
 
 @app.post("/ask")
 def ask(request: AskRequest):
-    start_time = datetime.now()
 
     try:
         safe_input = guard_input(request.symptoms)
 
-        try:
-            lang = detect(safe_input)
-        except Exception:
-            lang = "unknown"
-
-        use_functions = lang == "en"
-
-        if is_greeting(safe_input):
-            result = run_with_retry_chat(
-                safe_input,
-                use_functions=False,
-                mode="greeting",
-                api_mode=request.mode,
-            )
-            return {
-                "message": result["text"].strip(),
-                "latency_s": result["latency_s"]
-            }
-
         result = run_with_retry_chat(
             safe_input,
-            use_functions=use_functions,
+            use_functions=request.use_functions,
             mode="medical",
             api_mode=request.mode,
         )
-
+        print("Result in main ",result)
         try:
-            illnesses = scrub_output(result["text"])
-            if len(illnesses) == 3:
-                return {
-                    "illnesses": illnesses,
-                    "latency_s": result["latency_s"]
-                }
-            else:
-                return {
-                    "message": "Nie mogę znaleźć dokładnie 3 chorób. Spróbuj jeszcze raz.",
-                    "latency_s": result["latency_s"]
-                }
+            output = scrub_output(result["text"])
+            return {
+                "illnesses": output,
+                "latency_s": result["latency_s"]
+            }
+
         except ValueError:
             return {
-                "message": "Nie mogę znaleźć chorób na podstawie podanych objawów. Spróbuj jeszcze raz.",
+                "message": "Sorry, can't find any illnesses with those symptoms. Please, try again.",
                 "latency_s": result["latency_s"]
             }
 

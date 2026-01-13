@@ -42,11 +42,15 @@ def guard_input(text: str) -> str:
     return text
 
 
-def scrub_output(text: str, max_items: int = 3) -> list[str]:
+def scrub_output(text: str, max_items: int = 3) -> list[str] | str:
     if not text or not text.strip():
         raise ValueError("Empty output")
 
+    if text.count(",") < 2:
+        print("text in guardrails fast return", text)
+        return text
     text = text.lower()
+
     items = re.split(r"[,\n;]", text)
     items = [i.strip() for i in items if len(i.strip()) >= 2]
 

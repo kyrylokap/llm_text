@@ -19,6 +19,6 @@
 uvicorn app.main:app --reload 
 
 ## Testowanie
-curl -X POST http://127.0.0.1:8000/ask \
+curl -X POST http://127.0.0.1:8000/docs \
 -H "Content-Type: application/json" \
 -d '{"symptoms":"fever and cough", "k":3, "mode":"api", "use_functions":false}'

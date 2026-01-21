@@ -1,46 +1,72 @@
-
+import base64
+import json
+from json import JSONDecodeError
+from typing import Optional
 from .errors import ToolError, ToolTimeout
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from .guardrails import guard_input,scrub_output
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form
+from .guardrails import guard_input, scrub_output
 from .llm_runner import run_with_retry_chat
 from .errors import (
     SecurityBlocked,
     ValidationError,
 )
 from .app_logging import logger
+
 app = FastAPI(title="Groq Hosted Model API")
 
-
-
-class AskRequest(BaseModel):
-    symptoms: list[str]
-    k: int = 3
-    mode: str = "api"
-    use_functions: bool = False
 
 @app.get("/")
 def root():
     return ({"message": "This is my llm_text"})
 
-@app.post("/ask")
-def ask(request: AskRequest):
+
+@app.post("/chat")
+async def ask(
+        message: str = Form(),
+        history: str = Form(),
+        image: Optional[UploadFile] = File(None),
+        k: int = 3,
+        mode: str = "api",
+        use_functions: bool = False
+):
     logger.info("Endpoint ask called")
     try:
-        safe_input = guard_input(request.symptoms)
+        image_b64 = None
+        if image:
+            logger.info(f"Processing image: {image.filename}")
+            content = await image.read()
+            image_b64 = base64.b64encode(content).decode('utf-8')
+
+        try:
+            history_list = json.loads(history)
+        except JSONDecodeError:
+            logger.error("ValidationError")
+            raise ValidationError("Model returned invalid JSON")
+
+        guard_input(message)
 
         result = run_with_retry_chat(
-            safe_input,
-            use_functions=request.use_functions,
-            api_mode=request.mode,
+            current_message=message,
+            use_functions=use_functions,
+            history=history_list,
+            api_mode=mode,
+            image_data=image_b64,
         )
         try:
-            output = scrub_output(result["text"])
-            return {
-                "illnesses": output,
-                "latency_s": result["latency_s"]
-            }
+            if result.get("type") == "chat":
+                return {
+                    "status": "chat",
+                    "message": result["message"],
+                    "latency_s": result["latency_s"]
+                }
 
+            if result.get("type") == "report":
+                output = scrub_output(result["data"])
+                return {
+                    "status": "complete",
+                    "report": output,
+                    "latency_s": result["latency_s"]
+                }
         except ValueError:
             logger.error("ValueError")
 

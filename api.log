@@ -49,3 +49,284 @@
 2026-01-19 18:01:07.064 | INFO     | app.main:ask:28 - Endpoint ask called
 2026-01-19 18:01:07.064 | WARNING  | app.llm_runner:run_with_retry_chat:52 - CALLED run_with_retry_chat 0 time
 2026-01-19 18:01:07.080 | INFO     | app.llm_runner:chat_once:99 - CALLED API MODE
+2026-01-21 17:16:40.187 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:17:27.827 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:17:28.126 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:20:28.479 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:20:32.372 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:20:32.540 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:46:38.164 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:46:40.106 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:46:40.327 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:46:46.837 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:46:48.727 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:46:48.911 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:47:09.173 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:47:11.034 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:47:11.212 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:49:16.111 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:49:19.367 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:49:19.570 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:49:54.018 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:49:58.684 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:49:58.892 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:50:12.932 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:50:16.911 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:50:17.091 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:50:25.743 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:50:29.507 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:50:29.682 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:57:27.233 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:57:29.554 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:57:29.724 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:59:20.879 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:59:24.448 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:59:24.667 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 17:59:33.386 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 17:59:37.253 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 17:59:37.429 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:04:03.449 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:04:05.481 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:04:05.671 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:04:20.620 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:04:24.072 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:04:24.308 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:04:31.990 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:04:34.825 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:04:35.052 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:05:26.710 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:05:28.940 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:05:29.134 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:07:19.144 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:07:23.171 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:07:23.346 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:08:43.377 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:08:46.390 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:08:46.571 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:09:20.651 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:09:24.930 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:09:25.136 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:10:42.778 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:10:45.925 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:10:46.154 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:10:54.715 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:10:57.502 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:10:57.724 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:11:06.018 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:11:09.893 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:11:10.069 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:11:18.745 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:11:22.319 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:11:22.487 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:13:24.607 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:13:28.399 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:13:28.628 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:16:00.834 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:16:05.217 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:16:05.423 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:16:41.178 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:16:44.637 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:16:44.831 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:17:02.121 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:17:05.634 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:17:05.832 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:18:30.443 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:18:34.925 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:18:35.105 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:18:56.269 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:19:00.319 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:19:00.497 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:19:16.521 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:19:20.492 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:19:20.662 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:19:34.240 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:19:38.320 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:19:38.500 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:20:36.010 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:20:39.243 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:20:39.423 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:21:31.021 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:21:33.449 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:21:33.633 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:22:14.632 | INFO     | app.llm_runner:<module>:21 - INITIALIZED CLIENT
+2026-01-21 18:22:18.242 | INFO     | app.llm_runner:<module>:37 - INITIALIZED RAG
+2026-01-21 18:22:18.453 | INFO     | app.llm_runner:<module>:44 - LOADED RAG CSV
+2026-01-21 18:22:28.040 | INFO     | app.llm_runner:<module>:21 - INITIALIZED CLIENT
+2026-01-21 18:22:31.293 | INFO     | app.llm_runner:<module>:37 - INITIALIZED RAG
+2026-01-21 18:22:31.476 | INFO     | app.llm_runner:<module>:44 - LOADED RAG CSV
+2026-01-21 18:23:16.969 | INFO     | app.llm_runner:<module>:21 - INITIALIZED CLIENT
+2026-01-21 18:23:21.643 | INFO     | app.llm_runner:<module>:37 - INITIALIZED RAG
+2026-01-21 18:23:21.826 | INFO     | app.llm_runner:<module>:44 - LOADED RAG CSV
+2026-01-21 18:25:22.917 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:25:26.681 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:25:26.860 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:25:53.322 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:25:57.803 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:25:57.973 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:26:42.680 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:26:46.649 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:26:46.819 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:29:45.874 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:29:49.434 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:29:49.601 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:31:24.285 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:31:28.250 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:31:28.440 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:32:00.939 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:32:03.720 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:32:03.942 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:32:14.459 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:32:18.121 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:32:18.291 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:32:51.923 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:32:53.868 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:32:54.042 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:35:51.449 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:35:54.697 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:35:54.897 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:36:03.363 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:36:06.374 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:36:06.553 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:36:15.855 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:36:20.091 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:36:20.289 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:36:48.146 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:36:52.145 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:36:52.351 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:37:15.721 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:37:19.894 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:37:20.097 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:39:58.333 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:40:01.380 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:40:01.567 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:42:47.037 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:42:48.858 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:42:49.026 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:43:28.460 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:43:32.346 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:43:32.539 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:44:28.672 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:44:32.293 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:44:32.464 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:44:54.127 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:44:56.259 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:44:56.429 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:45:59.296 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:46:03.065 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:46:03.254 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:46:19.524 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:46:21.819 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:46:22.025 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 18:57:36.086 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 18:57:38.853 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 18:57:39.067 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 20:17:28.875 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 20:17:30.958 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 20:17:31.266 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 20:30:47.741 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 20:30:51.598 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 20:30:51.934 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 20:43:53.905 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 20:43:58.443 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 20:43:58.827 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 20:48:36.003 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 20:48:39.841 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 20:48:40.244 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 20:55:50.678 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 20:55:54.732 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 20:55:55.061 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:04:47.157 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:04:51.208 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:04:51.547 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:11:52.528 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:11:55.967 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:11:56.255 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:15:51.958 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:15:54.710 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:15:55.073 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:18:05.861 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:18:08.705 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:18:08.986 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:25:17.294 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:25:21.758 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:25:22.062 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:26:34.696 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:26:38.763 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:26:39.060 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:28:11.685 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:28:16.043 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:28:16.367 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:28:29.107 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:28:33.354 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:28:33.674 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:29:13.957 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:29:18.507 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:29:18.833 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:30:41.599 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:30:45.336 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:30:45.705 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:30:58.599 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:31:02.855 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:31:03.199 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:43:30.711 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:43:33.451 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:43:33.879 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:44:59.427 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:45:03.051 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:45:03.335 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:45:27.376 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:45:31.007 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:45:31.361 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 21:55:27.022 | INFO     | app.llm_runner:<module>:19 - INITIALIZED CLIENT
+2026-01-21 21:55:31.794 | INFO     | app.llm_runner:<module>:35 - INITIALIZED RAG
+2026-01-21 21:55:32.172 | INFO     | app.llm_runner:<module>:42 - LOADED RAG CSV
+2026-01-21 22:03:31.531 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:03:36.249 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:03:36.552 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:06:08.769 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:06:13.230 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:06:13.543 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:08:39.376 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:08:43.657 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:08:43.965 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:08:58.384 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:09:01.330 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:09:01.628 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:09:36.137 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:09:40.182 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:09:40.484 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:14:55.108 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:14:59.469 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:14:59.792 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:17:23.282 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:17:27.471 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:17:27.797 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:23:47.796 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:23:51.774 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:23:52.183 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:24:03.408 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:24:06.002 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:24:06.402 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:31:33.106 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:31:36.854 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:31:37.160 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:33:29.231 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:33:33.698 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:33:34.013 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:34:23.321 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:34:26.703 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:34:27.000 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-21 22:35:57.947 | INFO     | app.main:ask:32 - Endpoint ask called
+2026-01-21 22:35:57.949 | WARNING  | app.llm_runner:run_with_retry_chat:50 - CALLED run_with_retry_chat 0 time
+2026-01-21 22:35:57.971 | INFO     | app.llm_runner:chat_once:97 - CALLED API MODE
+2026-01-21 22:36:20.293 | INFO     | app.main:ask:32 - Endpoint ask called
+2026-01-21 22:36:20.294 | WARNING  | app.llm_runner:run_with_retry_chat:50 - CALLED run_with_retry_chat 0 time
+2026-01-21 22:36:20.323 | INFO     | app.llm_runner:chat_once:97 - CALLED API MODE
+2026-01-21 22:37:04.664 | INFO     | app.main:ask:32 - Endpoint ask called
+2026-01-21 22:37:04.664 | INFO     | app.main:ask:36 - Processing image: gardlo.jpeg
+2026-01-21 22:37:04.665 | WARNING  | app.llm_runner:run_with_retry_chat:50 - CALLED run_with_retry_chat 0 time
+2026-01-21 22:37:04.689 | INFO     | app.llm_runner:chat_once:97 - CALLED API MODE
+2026-01-21 22:37:04.689 | INFO     | app.llm_runner:chat_once:108 - ATTACHING IMAGE TO LLM REQUEST
+2026-01-21 22:49:01.956 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
+2026-01-21 22:49:05.745 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
+2026-01-21 22:49:06.165 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV

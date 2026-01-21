@@ -1,6 +1,8 @@
+import json
 import re
 from .errors import SecurityBlocked
 from .app_logging import logger
+
 INJECTION_PATTERNS = [
     r"ignore\s+(all|any|previous)\s+instructions",
     r"break\s+(the\s+)?system",
@@ -11,8 +13,6 @@ INJECTION_PATTERNS = [
     r"developer\s+message",
 ]
 
-
-
 PATH_TRAVERSAL_PATTERN = r"(\.\./)|(\.\.\\)|(\./)+"
 
 
@@ -22,46 +22,33 @@ def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-
-def guard_input(text: list[str]) -> list[str]:
-    norm = []
+def guard_input(text: str) :
     for item in text:
         if re.search(PATH_TRAVERSAL_PATTERN, item):
             logger.error("PATH_TRAVERSAL_PATTERN DETECTED")
             raise SecurityBlocked("Path traversal detected")
-        norm.append(normalize(item))
 
-    for i in norm:
-        score = sum(bool(re.search(p, i)) for p in INJECTION_PATTERNS)
+        norm_item = normalize(item)
+        score = sum(bool(re.search(p, norm_item)) for p in INJECTION_PATTERNS)
         if score >= 2:
             raise SecurityBlocked("Prompt injection detected")
 
-    return norm
 
+def scrub_output(data, max_items: int = 3):
+    if isinstance(data, dict):
+        return data
 
+    if isinstance(data, list):
+        return data[:max_items]
 
-def scrub_output(text, max_items: int = 3):
-    if isinstance(text, list):
-        return text[:max_items]
-
-    if not text or not text.strip():
-        logger.error("Empty output")
-
+    if not data or not data.strip():
+        logger.error("scrub_output received empty string")
         raise ValueError("Empty output")
 
-    if text.count(",") < 2:
-        return text
+    if data.startswith("{") and data.endswith("}"):
+        try:
+            return json.loads(data)
+        except json.JSONDecodeError:
+            pass
 
-    text = text.lower()
-    items = re.split(r"[,\n;]", text)
-    items = [i.strip() for i in items if len(i.strip()) >= 2]
-
-    unique = []
-    for i in items:
-        if i not in unique:
-            unique.append(i)
-
-    if not unique:
-        raise ValueError("No valid items")
-
-    return unique[:max_items]
+    return str(data)

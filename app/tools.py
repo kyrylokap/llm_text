@@ -1,15 +1,17 @@
-from pydantic import BaseModel,conlist
+from typing import Type
+from pydantic import BaseModel, conlist, Field
 import pandas as pd
 
+
 class DiagnoseArgs(BaseModel):
-    symptoms: conlist(str, min_length=1, max_length=3)
-    top_k: int = 3
-
-class ModelResponse(BaseModel):
-    illnesses: conlist(str, min_length=1, max_length=3)
-
-    class Config:
-        extra = "forbid"
+    symptoms: conlist(str, min_length=1, max_length=15) = Field(
+        ...,
+        description="List of symptoms perceived by the patient (e.g. ['fever', 'headache'])"
+    )
+    top_k: int = Field(
+        3,
+        description="Number of probable diseases to return"
+    )
 
 
 diseases = pd.read_csv("diseases.csv")
@@ -29,26 +31,27 @@ def lookup_diseases(symptoms: list[str], top_k: int = 3):
     return top["diseases"].tolist()
 
 
+def generate_openai_schema(tool_class: Type[BaseModel], name: str, description: str):
+    schema = tool_class.model_json_schema()
+
+    return {
+        "name": name,
+        "description": description,
+        "parameters": {
+            "type": "object",
+            "properties": schema.get("properties", {}),
+            "required": schema.get("required", []),
+        },
+    }
+
+
 TOOLS = {
     "diagnose": {
-        "openai_schema": {
-            "name": "diagnose",
-            "description": "Return probable diseases based on symptoms",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "symptoms": {
-                        "type": "array",
-                        "items": {"type": "string"},
-                    },
-                    "top_k": {
-                        "type": "integer",
-                        "default": 3
-                    }
-                },
-                "required": ["symptoms"]
-            },
-        },
+        "openai_schema": generate_openai_schema(
+            DiagnoseArgs,
+            name="diagnose",
+            description="Return probable diseases based on a list of symptoms provided by the patient."
+        ),
         "args_schema": DiagnoseArgs,
         "implementation": lookup_diseases,
     }

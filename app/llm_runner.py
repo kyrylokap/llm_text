@@ -1,24 +1,22 @@
 import time
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
+from groq import Groq
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import json
 from json import JSONDecodeError
 from .errors import ToolError, ValidationError
-from .tools import ModelResponse
-from .errors import  EmptyModelOutput
-from .prompts import MEDICAL_PROMPT
+from .errors import EmptyModelOutput
+from .prompts import MEDICAL_PROMPT, MEDICAL_PROMPT_VISION
+from .schemas import AgentResponse
 from .tools import TOOLS
 from .dispatcher import execute_tool
 from .rag import MiniRAG
 from .app_logging import logger
+
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY"),
-    base_url=os.getenv("GROQ_BASE_URL"),
-)
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 logger.info("INITIALIZED CLIENT")
 
 MODEL_NAME = os.getenv("MODEL_NAME")
@@ -45,12 +43,12 @@ rag.load_csv(
 logger.info("LOADED RAG CSV")
 
 
-def run_with_retry_chat(symptoms, **kwargs):
+def run_with_retry_chat(current_message: str, **kwargs):
     last = None
     for i in range(2):
         try:
             logger.warning(f"CALLED run_with_retry_chat {i} time")
-            return chat_once(symptoms, **kwargs)
+            return chat_once(current_message, **kwargs)
         except EmptyModelOutput as e:
             logger.error("EmptyModelOutput")
 
@@ -59,35 +57,34 @@ def run_with_retry_chat(symptoms, **kwargs):
     raise last
 
 
-def chat_once(symptoms, use_functions=True, api_mode="api"):
-
+def chat_once(current_message, history: list, image_data=None, use_functions=True, api_mode="api"):
     context = []
-    for symptom in symptoms:
-        context.extend(rag.query(symptom))
+    if current_message:
+        context.extend(rag.query(current_message))
 
-    full_prompt = MEDICAL_PROMPT
-    context = context[:10]
-    full_prompt += (
-            "\nContext:\n"
-            + "\n".join(context)
-            + "\nSymptoms:\n"
-            + "\n".join(symptoms)
-    )
+    rag_text = "\n".join(context[:5])
 
     t0 = time.time()
 
     if api_mode == "local":
         logger.info("CALLED LOCAL MODE")
 
+        full_prompt = MEDICAL_PROMPT
+        full_prompt += (
+                "\nRAG Context:\n"
+                + "\n".join(rag_text)
+                + "\nPatient Description:\n"
+                + "\n".join(current_message)
+        )
+
         out = local_gen(
             full_prompt,
             max_new_tokens=120,
             temperature=0.2,
             pad_token_id=tokenizer.eos_token_id,
-            return_full_text=False
+            return_full_text=False,
         )
         text = out[0]["generated_text"].strip()
-
 
         if not text:
             logger.error("EmptyModelOutput")
@@ -96,69 +93,114 @@ def chat_once(symptoms, use_functions=True, api_mode="api"):
 
         return {"text": text, "latency_s": round(time.time() - t0, 3)}
 
+
     logger.info("CALLED API MODE")
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=[
-            {"role": "system", "content": MEDICAL_PROMPT},
-            {
-                "role": "user",
-                "content": f"Context:\n{chr(10).join(context)}\n\nSymptoms:\n{symptoms}"
-            },
-        ]
-        ,
-        functions=[TOOLS[t]["openai_schema"] for t in TOOLS] if use_functions else None,
-        function_call="auto" if use_functions else "none",
-        timeout=15,
-        temperature=0.2,
 
-    )
+    messages = [{"role": "system", "content": MEDICAL_PROMPT_VISION}]
+    for msg in history:
+        messages.append({"role": msg["role"], "content": str(msg["content"])})
 
-    msg = response.choices[0].message
+    user_content = []
+    text_payload = f"RAG Context:\n{rag_text}\n\nPatient Description:\n{current_message}"
+    user_content.append({"type": "text", "text": text_payload})
 
-    if hasattr(msg, "function_call") and msg.function_call:
-        logger.info("USED FUNCTION CALL")
+    if image_data:
+        logger.info("ATTACHING IMAGE TO LLM REQUEST")
+        user_content.append({
+            "type": "image_url",
+            "image_url": {
+                "url": f"data:image/jpeg;base64,{image_data}",
+                "detail": "auto"
+            }
+        })
 
-        name = msg.function_call.name
+    messages.append({"role": "user", "content": user_content})
+
+
+
+    MAX_TURNS = 3
+    current_turn = 0
+
+    while current_turn < MAX_TURNS:
+        current_turn += 1
+
+        response = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=messages,
+            functions=[TOOLS[t]["openai_schema"] for t in TOOLS] if use_functions else None,
+            function_call="auto" if use_functions else "none",
+            timeout=30,
+            temperature=0.3,
+        )
+
+        msg = response.choices[0].message
+
+        if hasattr(msg, "function_call") and msg.function_call:
+            logger.info("USED FUNCTION CALL")
+
+            fn_name = msg.function_call.name
+            fn_args_json = msg.function_call.arguments
+
+            try:
+                args = json.loads(fn_args_json)
+
+            except JSONDecodeError:
+                logger.error("ValidationError")
+                raise ValidationError("Function call arguments must be valid JSON")
+
+            tool_result = execute_tool(fn_name, args)
+
+            if "error" in tool_result:
+                logger.error("ToolError")
+                raise ToolError(tool_result["error"])
+
+            messages.append({
+                "role": "assistant",
+                "function_call": {
+                    "name": fn_name,
+                    "arguments": fn_args_json
+                },
+                "content": None
+            })
+
+            messages.append({
+                "role": "function",
+                "name": fn_name,
+                "content": json.dumps(tool_result)
+            })
+
+            logger.info("TOOL EXECUTED. FEEDING RESULT BACK TO LLM...")
+            continue
+
+        content = msg.content
+        if not content:
+            raise EmptyModelOutput()
 
         try:
-            args = json.loads(msg.function_call.arguments)
-
+            data = json.loads(content)
         except JSONDecodeError:
             logger.error("ValidationError")
+            return {
+                "type": "chat",
+                "message": content,
+                "latency_s": round(time.time() - t0, 3),
+            }
 
-            raise ValidationError("Function call arguments must be valid JSON")
+        try:
+            agent_response = AgentResponse(**data)
+        except Exception as e:
+            raise ValidationError(str(e))
 
-        result = execute_tool(name, args)
+        if agent_response.action == "question":
+            return {
+                "type": "chat",
+                "message": agent_response.message_to_patient,
+                "latency_s": round(time.time() - t0, 3),
+            }
 
-        if "error" in result:
-            logger.error("ToolError")
-            raise ToolError(result["error"])
-
-        return {
-            "text": result.get("result", []),
-            "latency_s": round(time.time() - t0, 3),
-        }
-
-    content = msg.content
-    if not content:
-
-        raise EmptyModelOutput()
-
-    try:
-        data = json.loads(content)
-    except JSONDecodeError:
-        logger.error("ValidationError")
-
-        raise ValidationError("Model returned invalid JSON")
-
-    try:
-        validated = ModelResponse(**data)
-    except Exception as e:
-        raise ValidationError(str(e))
-
-    return {
-        "text": validated.illnesses,
-        "latency_s": round(time.time() - t0, 3),
-    }
-
+        elif agent_response.action == "final_report":
+            return {
+                "type": "report",
+                "data": agent_response.report_data.model_dump(),
+                "latency_s": round(time.time() - t0, 3),
+            }

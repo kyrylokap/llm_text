@@ -26,15 +26,14 @@ def root():
 async def ask(
         message: str = Form(...),
         history: str = Form("[]"),
-        image: Optional[UploadFile] = File(None),
+        images: Optional[List[UploadFile]] = File(None),
         k: int = Form(5),
         mode: str = Form("api"),
         use_functions: bool = Form(True)
 ):
     logger.info("Endpoint ask called")
     try:
-        mime_type = image.content_type if image else "image/jpeg"
-        image_b64 = await _process_uploaded_image(image)
+        processed_images = await _process_uploaded_images(images)
 
         chat_history = _parse_chat_history(history)
 
@@ -45,8 +44,7 @@ async def ask(
             use_functions=use_functions,
             history=chat_history,
             api_mode=mode,
-            image_data=image_b64,
-            image_mime=mime_type,
+            images_list=processed_images,
             k=k
         )
 
@@ -72,18 +70,26 @@ async def ask(
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
-async def _process_uploaded_image(image: Optional[UploadFile]) -> Optional[str]:
-    if not image:
-        return None
+async def _process_uploaded_images(files: Optional[List[UploadFile]]) -> List[Dict[str, str]]:
+    if not files:
+        return []
 
-    logger.info(f"Processing image: {image.filename}")
-    try:
-        content = await image.read()
-        return base64.b64encode(content).decode('utf-8')
-    except Exception as e:
-        logger.error(f"Failed to process image: {e}")
-        raise ImageProcessingError(f"Image processing failed: {str(e)}")
+    processed = []
+    for image in files:
+        logger.info(f"Processing image: {image.filename}")
+        try:
+            content = await image.read()
+            b64 = base64.b64encode(content).decode('utf-8')
+            mime = image.content_type or "image/jpeg"
+            processed.append({
+                "data": b64,
+                "mime": mime
+            })
+        except Exception as e:
+            logger.error(f"Failed to process image {image.filename}: {e}")
+            raise ImageProcessingError(f"Failed to process image {image.filename}")
 
+    return processed
 
 def _parse_chat_history(history_json: str) -> List[ChatMessage]:
     if not history_json or not history_json.strip():

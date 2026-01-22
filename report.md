@@ -3,7 +3,7 @@
 
 ## 📊 1. Metrics Summary
 - **Pass Rate:** `100.0%` (4/4)
-- **Avg Latency:** `0.56s`
+- **Avg Latency:** `0.37s`
 
 ## 2. Detailed Test Results
 1. Test Case Name - Headache (Standard)
@@ -12,7 +12,7 @@
 
         HTTP Status -  200
 
-        Latency (s) - 1.722
+        Latency (s) - 0.995
 
         Result - PASS
 
@@ -24,7 +24,7 @@
 
         HTTP Status -  200
 
-        Latency (s) - 0.5
+        Latency (s) - 0.498
 
         Result - PASS
 
@@ -36,7 +36,7 @@
 
         HTTP Status -  400
 
-        Latency (s) - 0.002
+        Latency (s) - 0.003
 
         Result - PASS
 

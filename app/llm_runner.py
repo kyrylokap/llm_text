@@ -15,6 +15,7 @@ from .dispatcher import execute_tool
 from .rag import MiniRAG
 from .app_logging import logger
 
+
 class ChatMessage(BaseModel):
     role: str
     content: str
@@ -67,8 +68,7 @@ def run_with_retry_chat(current_message: str, **kwargs):
 def chat_once(
         current_message,
         history: List[ChatMessage],
-        image_data=None,
-        image_mime="image/jpeg",
+        images_list: List[Dict[str, str]] = None,
         use_functions=True,
         api_mode="api",
         k: int = 5
@@ -79,7 +79,7 @@ def chat_once(
         return _run_local_mode(current_message, rag_text)
 
     logger.info("CALLED API MODE")
-    messages = _build_api_messages(history, current_message, rag_text, image_data, image_mime)
+    messages = _build_api_messages(history, current_message, rag_text, images_list)
 
     MAX_TURNS = 3
     current_turn = 0
@@ -87,13 +87,14 @@ def chat_once(
     while current_turn < MAX_TURNS:
         current_turn += 1
 
-        tools_payload = [TOOLS[t]["tool_definition"] for t in TOOLS] if use_functions else None
+        tools_payload = _build_tools_payload(use_functions)
+
         try:
             response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=messages,
                 tools=tools_payload,
-                tool_choice="auto",
+                tool_choice="auto" if tools_payload else None,
                 timeout=30,
                 temperature=0.1,
             )
@@ -173,8 +174,7 @@ def _build_api_messages(
         history: List[ChatMessage],
         current_message: str,
         rag_text: str,
-        image_data: Optional[str],
-        image_mime: str
+        images_list: List[Dict[str, str]],
 ) -> List[Dict[str, Any]]:
     messages = [{"role": "system", "content": MEDICAL_PROMPT_VISION}]
 
@@ -184,18 +184,30 @@ def _build_api_messages(
     text_payload = f"RAG Context:\n{rag_text}\n\nPatient Description:\n{current_message}"
     user_content = [{"type": "text", "text": text_payload}]
 
-    if image_data:
-        logger.info("ATTACHING IMAGE TO LLM REQUEST")
-        user_content.append({
-            "type": "image_url",
-            "image_url": {
-                "url": f"data:{image_mime};base64,{image_data}",
-                "detail": "auto"
-            }
-        })
+    if images_list:
+        logger.info(f"ATTACHING IMAGES TO LLM REQUEST")
+        for img in images_list:
+            user_content.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:{img['mime']};base64,{img['data']}",
+                    "detail": "auto"
+                }
+            })
 
     messages.append({"role": "user", "content": user_content})
     return messages
+
+
+def _build_tools_payload(use_functions: bool) -> Optional[List[dict]]:
+    active_tools = []
+    for name, tool_config in TOOLS.items():
+        if name == "provide_response":
+            active_tools.append(tool_config["tool_definition"])
+        elif use_functions:
+            active_tools.append(tool_config["tool_definition"])
+
+    return active_tools if active_tools else None
 
 
 def _execute_tool_call(tool_call, messages: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:

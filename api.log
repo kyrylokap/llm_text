@@ -812,3 +812,96 @@
 2026-01-22 22:02:06.604 | INFO     | app.main:ask:34 - Endpoint ask called
 2026-01-22 22:02:06.605 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
 2026-01-22 22:02:06.605 | ERROR    | app.main:ask:55 - HTTPException
+2026-01-22 22:12:18.940 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:12:23.025 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:12:25.424 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:19:20.362 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:19:20.362 | INFO     | app.main:_process_uploaded_image:79 - Processing image: gardlo.jpeg
+2026-01-22 22:19:20.362 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:19:20.371 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:19:20.371 | INFO     | app.llm_runner:_build_api_messages:188 - ATTACHING IMAGE TO LLM REQUEST
+2026-01-22 22:19:21.026 | WARNING  | app.llm_runner:chat_once:108 - Model didn't use tool, falling back to text content
+2026-01-22 22:30:29.796 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:30:33.786 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:30:37.025 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:31:16.363 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:31:20.092 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:31:22.652 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:31:37.705 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:31:41.159 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:31:43.964 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:32:50.745 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:32:54.008 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:32:56.769 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:37:07.146 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:37:11.610 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:37:14.101 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:37:33.138 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:37:37.103 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:37:39.500 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:37:39.508 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:37:39.508 | INFO     | app.main:_process_uploaded_image:79 - Processing image: test_skin.png
+2026-01-22 22:37:39.509 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:37:39.520 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:37:39.520 | INFO     | app.llm_runner:_build_api_messages:189 - ATTACHING IMAGE TO LLM REQUEST
+2026-01-22 22:37:40.138 | ERROR    | app.llm_runner:chat_once:102 - API Error: Error code: 400 - {'error': {'message': 'invalid image data', 'type': 'invalid_request_error'}}
+2026-01-22 22:37:40.138 | ERROR    | app.main:ask:67 - ToolError
+2026-01-22 22:40:00.867 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:40:05.384 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:40:07.789 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:40:07.798 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:40:07.798 | INFO     | app.main:_process_uploaded_image:79 - Processing image: test_skin.png
+2026-01-22 22:40:07.799 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:40:07.809 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:40:07.809 | INFO     | app.llm_runner:_build_api_messages:189 - ATTACHING IMAGE TO LLM REQUEST
+2026-01-22 22:40:08.363 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 22:40:08.363 | INFO     | app.llm_runner:_execute_tool_call:218 - EXECUTING TOOL: provide_response
+2026-01-22 22:40:08.367 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:40:08.367 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:40:08.377 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:40:08.943 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 22:40:08.944 | INFO     | app.llm_runner:_execute_tool_call:218 - EXECUTING TOOL: provide_response
+2026-01-22 22:56:59.959 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-22 22:57:03.959 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-22 22:57:06.476 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 22:57:06.642 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:57:06.643 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:57:06.656 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:57:07.456 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 22:57:07.456 | INFO     | app.llm_runner:_execute_tool_call:218 - EXECUTING TOOL: provide_response
+2026-01-22 22:57:07.460 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:57:07.460 | ERROR    | app.main:ask:53 - HTTPException
+2026-01-22 22:57:07.463 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:57:07.464 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 22:57:07.464 | ERROR    | app.main:ask:53 - HTTPException
+2026-01-22 22:58:53.184 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-22 22:58:55.129 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-22 22:58:57.832 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 22:58:57.841 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:58:57.841 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:58:57.853 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:58:58.266 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 22:58:58.267 | INFO     | app.llm_runner:_execute_tool_call:218 - EXECUTING TOOL: provide_response
+2026-01-22 22:58:58.276 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:58:58.277 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:58:58.354 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:58:58.638 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 22:58:58.638 | INFO     | app.llm_runner:_execute_tool_call:218 - EXECUTING TOOL: provide_response
+2026-01-22 23:04:58.815 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-22 23:05:02.066 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-22 23:05:04.489 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 23:05:06.824 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 23:05:06.825 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 23:05:06.837 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 23:05:07.815 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 23:05:07.815 | INFO     | app.llm_runner:_execute_tool_call:218 - EXECUTING TOOL: provide_response
+2026-01-22 23:05:07.818 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 23:05:07.818 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 23:05:07.830 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 23:05:08.312 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 23:05:08.313 | INFO     | app.llm_runner:_execute_tool_call:218 - EXECUTING TOOL: provide_response
+2026-01-22 23:05:08.316 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 23:05:08.317 | ERROR    | app.main:ask:53 - HTTPException
+2026-01-22 23:05:08.319 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 23:05:08.320 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 23:05:08.320 | ERROR    | app.main:ask:53 - HTTPException

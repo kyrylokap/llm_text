@@ -67,11 +67,11 @@ The server will start at `http://127.0.0.1:8000`.
 To test via terminal, use the command below.
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/ask" \         
+curl -X POST "http://127.0.0.1:8000/ask" \
      -F "message=Does this look like strep throat?" \
      -F "history=[]" \
-     -F "image=@/home/vasyl/throat.jpeg" \
-     -F "use_functions=false" \
-     -F "mode":"api" \
+     -F "images=@/home/vasyl/throat.jpeg" \
+     -F "use_functions=true" \
+     -F "mode=api" \
      -F "k=3"
 ```

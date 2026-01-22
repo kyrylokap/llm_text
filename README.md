@@ -66,18 +66,12 @@ The server will start at `http://127.0.0.1:8000`.
 
 To test via terminal, use the command below.
 
-> **Note:** Replace `/your-endpoint-path` with the actual route defined in `app/main.py` (e.g., `/predict`, `/chat`, or `/process`).
-
 ```bash
-curl -X POST http://127.0.0.1:8000/your-endpoint-path \
--H "Content-Type: application/json" \
--d '{"symptoms":"fever and cough", "mode":"api", "use_functions":false}'
-```
-Example:
-```bash
-curl -X POST "http://127.0.0.1:8000/chat" \         
+curl -X POST "http://127.0.0.1:8000/ask" \         
      -F "message=Does this look like strep throat?" \
      -F "history=[]" \
-     -F "image=@/home/throat.jpeg" \
+     -F "image=@/home/vasyl/throat.jpeg" \
      -F "use_functions=false" \
+     -F "mode":"api" \
+     -F "k=3"
 ```

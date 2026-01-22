@@ -1,16 +1,18 @@
 import base64
 import json
+
 from json import JSONDecodeError
-from typing import Optional
-from .errors import ToolError, ToolTimeout
+from typing import Optional, List, Dict, Any
+from .errors import ToolError, ToolTimeout, InvalidHistoryFormatError, ImageProcessingError
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from .guardrails import guard_input, scrub_output
-from .llm_runner import run_with_retry_chat
+from .llm_runner import run_with_retry_chat, ChatMessage
 from .errors import (
     SecurityBlocked,
     ValidationError,
 )
 from .app_logging import logger
+
 
 app = FastAPI(title="Groq Hosted Model API")
 
@@ -20,80 +22,104 @@ def root():
     return ({"message": "This is my llm_text"})
 
 
-@app.post("/chat")
+@app.post("/ask")
 async def ask(
-        message: str = Form(),
-        history: str = Form(),
+        message: str = Form(...),
+        history: str = Form("[]"),
         image: Optional[UploadFile] = File(None),
-        k: int = 3,
-        mode: str = "api",
-        use_functions: bool = False
+        k: int = Form(5),
+        mode: str = Form("api"),
+        use_functions: bool = Form(True)
 ):
     logger.info("Endpoint ask called")
     try:
-        image_b64 = None
-        if image:
-            logger.info(f"Processing image: {image.filename}")
-            content = await image.read()
-            image_b64 = base64.b64encode(content).decode('utf-8')
+        mime_type = image.content_type if image else "image/jpeg"
+        image_b64 = await _process_uploaded_image(image)
 
-        try:
-            history_list = json.loads(history)
-        except JSONDecodeError:
-            logger.error("ValidationError")
-            raise ValidationError("Model returned invalid JSON")
+        chat_history = _parse_chat_history(history)
 
         guard_input(message)
 
         result = run_with_retry_chat(
             current_message=message,
             use_functions=use_functions,
-            history=history_list,
+            history=chat_history,
             api_mode=mode,
             image_data=image_b64,
+            image_mime=mime_type,
+            k=k
         )
-        try:
-            if result.get("type") == "chat":
-                return {
-                    "status": "chat",
-                    "message": result["message"],
-                    "latency_s": result["latency_s"]
-                }
 
-            if result.get("type") == "report":
-                output = scrub_output(result["data"])
-                return {
-                    "status": "complete",
-                    "report": output,
-                    "latency_s": result["latency_s"]
-                }
-        except ValueError:
-            logger.error("ValueError")
-
-            return {
-                "message": "Sorry, can't find any illnesses with those symptoms. Please, try again.",
-                "latency_s": result["latency_s"]
-            }
-
+        return _format_llm_response(result)
     except SecurityBlocked as e:
         logger.error("HTTPException")
-
         raise HTTPException(status_code=400, detail=e.detail)
+
     except ValidationError as e:
         logger.error("ValidationError")
-
         raise HTTPException(status_code=422, detail=e.detail)
+
     except ToolTimeout as e:
         logger.error("ToolTimeout")
-
         raise HTTPException(status_code=504, detail=e.detail)
+
     except ToolError as e:
         logger.error("ToolError")
-
         raise HTTPException(status_code=502, detail=e.detail)
-    except HTTPException as e:
-        raise
+
     except Exception as e:
         logger.error(e)
-
         raise HTTPException(status_code=500, detail="Internal server error")
+
+
+async def _process_uploaded_image(image: Optional[UploadFile]) -> Optional[str]:
+    if not image:
+        return None
+
+    logger.info(f"Processing image: {image.filename}")
+    try:
+        content = await image.read()
+        return base64.b64encode(content).decode('utf-8')
+    except Exception as e:
+        logger.error(f"Failed to process image: {e}")
+        raise ImageProcessingError(f"Image processing failed: {str(e)}")
+
+
+def _parse_chat_history(history_json: str) -> List[ChatMessage]:
+    if not history_json or not history_json.strip():
+        return []
+
+    try:
+        raw_data = json.loads(history_json)
+        return [ChatMessage(**item) for item in raw_data]
+    except JSONDecodeError:
+        logger.error("ValidationError: Invalid JSON in history")
+        raise InvalidHistoryFormatError("Model returned invalid JSON")
+    except Exception as e:
+        logger.error(f"History item validation error: {e}")
+        raise InvalidHistoryFormatError(f"Invalid history item: {e}")
+
+
+def _format_llm_response(result: Dict[str, Any]) -> Dict[str, Any]:
+    result_type = result.get("type")
+
+    try:
+        if result_type == "chat":
+            return {
+                "status": "chat",
+                "message": result["message"],
+            }
+
+        if result_type == "report":
+            clean_report = scrub_output(result["data"])
+            return {
+                "status": "complete",
+                "report": clean_report,
+            }
+        raise ValueError(f"Unknown result type: {result_type}")
+    except (KeyError, ValueError) as e:
+        logger.error(f"Response formatting error: {e}")
+        return {
+            "status": "chat",
+            "message": "I'm sorry, I'm having trouble understanding these symptoms. Could you describe them in more detail or send a photo?",
+        }

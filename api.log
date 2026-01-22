@@ -330,3 +330,485 @@
 2026-01-21 22:49:01.956 | INFO     | app.llm_runner:<module>:20 - INITIALIZED CLIENT
 2026-01-21 22:49:05.745 | INFO     | app.llm_runner:<module>:36 - INITIALIZED RAG
 2026-01-21 22:49:06.165 | INFO     | app.llm_runner:<module>:43 - LOADED RAG CSV
+2026-01-22 14:35:24.097 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 14:35:27.442 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 14:35:27.744 | INFO     | app.llm_runner:<module>:45 - LOADED RAG CSV
+2026-01-22 14:44:02.540 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 14:44:06.256 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 14:44:06.437 | INFO     | app.llm_runner:<module>:45 - LOADED RAG CSV
+2026-01-22 14:47:23.359 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 14:47:26.741 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 14:47:26.920 | INFO     | app.llm_runner:<module>:45 - LOADED RAG CSV
+2026-01-22 14:47:26.933 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:50:09.243 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 14:50:12.728 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 14:50:12.915 | INFO     | app.llm_runner:<module>:45 - LOADED RAG CSV
+2026-01-22 14:50:12.929 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:50:13.085 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:50:13.086 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 14:52:35.246 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 14:52:38.430 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 14:52:38.631 | INFO     | app.llm_runner:<module>:45 - LOADED RAG CSV
+2026-01-22 14:52:38.644 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:52:38.799 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:52:38.799 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 14:52:38.803 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:52:38.803 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 14:52:38.803 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 14:53:48.707 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 14:53:51.854 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 14:53:52.031 | INFO     | app.llm_runner:<module>:45 - LOADED RAG CSV
+2026-01-22 14:53:52.045 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:53:52.201 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:53:52.201 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 14:53:52.204 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 14:53:52.204 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 14:53:52.204 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:15:14.675 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 16:15:20.158 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 16:15:24.137 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 16:15:24.347 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:15:24.353 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:15:24.354 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:15:24.359 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:15:24.359 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 16:15:24.359 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:32:40.181 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 16:32:44.576 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 16:32:48.605 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 16:34:18.180 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 16:34:22.745 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 16:34:26.669 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 16:34:26.678 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:34:26.680 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:34:26.703 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:34:27.270 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:34:27.295 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:34:27.761 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "The patient has a severe headache and fever for 2 days.",\n      "reported_symptoms": [\n        "headache",\n        "fever"\n      ],\n      "duration": "2 days",\n      "ai_diagnosis_suggestion": "Influenza or COVID-19",\n      "recommended_specialization": [\n        "Infectious Disease Specialist",\n        "Primary Care Physician"\n      ],\n      "confidence_score": 0.6\n    }\n  }\n]'}}
+2026-01-22 16:34:27.766 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:34:27.766 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:34:27.787 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:34:28.070 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:34:28.072 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:34:28.478 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "question",\n    "message_to_patient": "Can you describe the stomach pain in more detail? Is it a sharp pain, a dull ache, or a burning sensation?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 16:34:28.483 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:34:28.483 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:34:28.487 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:34:28.487 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 16:34:28.487 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:34:28.492 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:34:28.492 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:34:28.513 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:34:28.790 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:34:28.791 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:34:29.502 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "Alzheimer\'s disease is a progressive neurodegenerative disorder characterized by symptoms such as memory loss, confusion, and mood changes. Cognitive tests and biomarkers used for diagnosis include the Mini-Mental State Examination (MMSE) and neuroimaging techniques like Magnetic Resonance Imaging (MRI) and Positron Emission Tomography (PET).",\n      "reported_symptoms": [\n        "memory loss",\n        "confusion",\n        "mood changes"\n      ],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "Alzheimer\'s disease",\n      "recommended_specialization": [\n        "Neurologist"\n      ],\n      "confidence_score": 0.8\n    }\n  }\n]'}}
+2026-01-22 16:34:29.506 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:34:29.507 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:34:29.525 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:34:30.013 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "A bulging tympanic membrane is a symptom commonly associated with Acute Otitis Media, an infection of the middle ear.",\n      "reported_symptoms": ["bulging tympanic membrane"],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "Acute Otitis Media",\n      "recommended_specialization": ["Otolaryngologist"],\n      "confidence_score": 0.9\n    }\n  }\n]'}}
+2026-01-22 16:35:30.579 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 16:35:34.632 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 16:35:38.642 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 16:35:42.320 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:35:42.321 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:35:42.341 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:35:43.048 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:35:43.070 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:35:43.846 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "The patient has been experiencing a severe headache and fever for 2 days.",\n      "reported_symptoms": [\n        "headache",\n        "fever"\n      ],\n      "duration": "2 days",\n      "ai_diagnosis_suggestion": "Influenza or COVID-19",\n      "recommended_specialization": [\n        "Infectious Disease Specialist",\n        "Primary Care Physician"\n      ],\n      "confidence_score": 0.6\n    }\n  }\n]'}}
+2026-01-22 16:35:43.852 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:35:43.852 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:35:43.882 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:35:44.465 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:35:44.466 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:35:44.873 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "question",\n    "message_to_patient": "Can you describe the stomach pain in more detail? Is it a sharp pain, a dull ache, or a burning sensation?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 16:35:44.877 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:35:44.878 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:35:44.881 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:35:44.882 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 16:35:44.882 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:35:44.885 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:35:44.886 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:35:44.909 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:35:45.586 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:35:45.588 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:35:46.712 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "Alzheimer\'s disease is a progressive neurodegenerative disorder characterized by symptoms such as memory loss, confusion, and mood changes. Cognitive tests and biomarkers used for diagnosis include the Mini-Mental State Examination (MMSE) and neuroimaging techniques like Magnetic Resonance Imaging (MRI) and Positron Emission Tomography (PET).",\n      "reported_symptoms": [\n        "memory loss",\n        "confusion",\n        "mood changes"\n      ],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "Alzheimer\'s disease",\n      "recommended_specialization": [\n        "Neurologist"\n      ],\n      "confidence_score": 0.8\n    }\n  }\n]'}}
+2026-01-22 16:35:46.716 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:35:46.717 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:35:46.738 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:35:47.269 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:35:47.271 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:35:48.044 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "Based on the symptom of a bulging tympanic membrane, the likely diagnosis is Acute Otitis Media, an infection of the middle ear.",\n      "reported_symptoms": [\n        "bulging tympanic membrane"\n      ],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "Acute Otitis Media",\n      "recommended_specialization": [\n        "Otolaryngologist"\n      ],\n      "confidence_score": 0.9\n    }\n  }\n]'}}
+2026-01-22 16:43:27.891 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 16:43:30.535 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 16:43:34.356 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 16:43:49.976 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:43:49.977 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:43:49.997 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:43:50.934 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:43:50.954 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:43:51.834 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "The patient has been experiencing a severe headache and fever for 2 days.",\n      "reported_symptoms": [\n        "headache",\n        "fever"\n      ],\n      "duration": "2 days",\n      "ai_diagnosis_suggestion": "Influenza or COVID-19",\n      "recommended_specialization": [\n        "Infectious Disease Specialist",\n        "Primary Care Physician"\n      ],\n      "confidence_score": 0.6\n    }\n  }\n]'}}
+2026-01-22 16:43:51.839 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:43:51.840 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:43:51.858 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:43:52.140 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "question",\n    "message_to_patient": "Can you describe the pain in your stomach after eating? Is it a sharp pain, a dull ache, or a burning sensation?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 16:43:52.145 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:43:52.145 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:43:52.149 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:43:52.149 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 16:43:52.149 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:43:52.153 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:43:52.153 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:43:52.172 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:43:52.448 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:43:52.449 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:43:53.243 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "Alzheimer\'s disease is a progressive neurodegenerative disorder characterized by symptoms such as memory loss, confusion, and mood changes. Cognitive tests and biomarkers play a crucial role in its diagnosis.",\n      "reported_symptoms": [],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "The patient\'s inquiry suggests a focus on Alzheimer\'s disease diagnosis methods.",\n      "recommended_specialization": [\n        "Neurologist"\n      ],\n      "confidence_score": 1.0\n    }\n  }\n]'}}
+2026-01-22 16:43:53.247 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:43:53.247 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:43:53.266 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:43:53.677 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:43:53.678 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:43:54.291 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "The patient\'s concern is a bulging tympanic membrane, which is a symptom commonly associated with Acute Otitis Media, an infection of the middle ear.",\n      "reported_symptoms": [\n        "bulging tympanic membrane"\n      ],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "Acute Otitis Media",\n      "recommended_specialization": [\n        "Otolaryngologist"\n      ],\n      "confidence_score": 0.9\n    }\n  }\n]'}}
+2026-01-22 16:49:41.422 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 16:49:45.481 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 16:49:49.363 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 16:49:57.707 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:49:57.709 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:49:57.732 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:49:58.608 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:49:58.633 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:49:59.002 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "question",\n    "message_to_patient": "Can you tell me more about your headache? Is it localized to one side of your head or is it a general headache?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 16:49:59.007 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:49:59.007 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:49:59.032 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:49:59.404 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "question",\n    "message_to_patient": "Can you describe the pain in your stomach after eating? Is it a sharp pain, a dull ache, or a burning sensation?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 16:49:59.409 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:49:59.409 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:49:59.413 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:49:59.413 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 16:49:59.414 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 16:49:59.418 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:49:59.418 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:49:59.441 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:50:00.020 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:50:00.021 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:50:01.042 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "The patient is inquiring about cognitive tests and biomarkers used for Alzheimer\'s diagnosis.",\n      "reported_symptoms": [],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "The patient\'s inquiry suggests a concern about Alzheimer\'s disease or a desire for information about its diagnosis.",\n      "recommended_specialization": [\n        "Neurologist"\n      ],\n      "confidence_score": 0.0\n    }\n  }\n]'}}
+2026-01-22 16:50:01.046 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 16:50:01.047 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 16:50:01.068 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 16:50:01.453 | INFO     | app.llm_runner:chat_once:148 - USED FUNCTION CALL
+2026-01-22 16:50:01.455 | INFO     | app.llm_runner:chat_once:180 - TOOL EXECUTED. FEEDING RESULT BACK TO LLM...
+2026-01-22 16:50:02.274 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "final_report",\n    "message_to_patient": null,\n    "report_data": {\n      "summary": "A bulging tympanic membrane is a symptom commonly associated with Acute Otitis Media, an infection of the middle ear.",\n      "reported_symptoms": [\n        "bulging tympanic membrane"\n      ],\n      "duration": "Not specified",\n      "ai_diagnosis_suggestion": "Acute Otitis Media",\n      "recommended_specialization": [\n        "Otolaryngologist"\n      ],\n      "confidence_score": 0.9\n    }\n  }\n]'}}
+2026-01-22 17:02:39.057 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 17:02:43.271 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 17:02:47.138 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 17:02:56.518 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 17:02:56.519 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 17:02:56.542 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 17:02:57.141 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "message",\n    "message_to_patient": "Can you tell me more about your headache? Is it localized to one side of your head or is it a general headache?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 17:02:57.145 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 17:02:57.146 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 17:02:57.167 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 17:02:57.445 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "message",\n    "message_to_patient": "Can you describe the pain in more detail? Is it a sharp pain, a dull ache, or a burning sensation?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 17:02:57.450 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 17:02:57.450 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 17:02:57.454 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 17:02:57.454 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 17:02:57.454 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 17:02:57.458 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 17:02:57.458 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 17:02:57.481 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 17:02:57.856 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "tool call validation failed: attempted to call tool 'message' which was not in request.tools", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "name": "message",\n    "parameters": {\n      "message_to_patient": "For an Alzheimer\'s diagnosis, cognitive tests like the Mini-Mental State Examination (MMSE) and neuroimaging such as MRI or PET scans are commonly used. Biomarkers like amyloid-beta and tau protein levels in cerebrospinal fluid can also support the diagnosis."\n    }\n  }\n]'}}
+2026-01-22 17:02:57.860 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 17:02:57.860 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 0 time
+2026-01-22 17:02:57.883 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 17:02:58.368 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "message",\n    "message_to_patient": "A bulging tympanic membrane is often related to an ear infection. I recommend you see an Otolaryngologist (ENT specialist) for a proper evaluation and treatment.",\n    "report_data": null\n  }\n]'}}
+2026-01-22 18:33:25.226 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:33:29.499 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:33:33.481 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:34:17.763 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:34:20.672 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:34:24.520 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:34:30.246 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 18:34:30.247 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 18:34:30.267 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 18:34:30.267 | INFO     | app.llm_runner:chat_once:113 - 1
+2026-01-22 18:34:30.267 | INFO     | app.llm_runner:chat_once:119 - 2
+2026-01-22 18:34:30.267 | INFO     | app.llm_runner:chat_once:136 - 2
+2026-01-22 18:34:30.912 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "message",\n    "message_to_patient": "Can you please describe the severity of your headache and provide more details about your fever (e.g., temperature, chills)?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 18:35:39.150 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:35:42.197 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:35:46.667 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:36:26.346 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:36:29.484 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:36:34.154 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:39:41.751 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:39:44.369 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:39:48.916 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:44:27.867 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:44:33.253 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:44:37.385 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:45:45.284 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:45:49.644 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:45:53.564 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:47:24.237 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:47:29.279 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:47:32.998 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:52:49.101 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:52:52.795 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:52:56.651 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:53:10.675 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:53:14.091 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:53:17.548 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:53:32.081 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:53:34.753 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:53:38.599 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:57:01.328 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:57:06.379 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:57:11.128 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:58:29.638 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:58:34.272 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:58:37.889 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:58:49.472 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:58:54.138 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:58:58.292 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 18:59:09.224 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 18:59:13.287 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 18:59:17.586 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 19:00:27.263 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 19:00:33.365 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 19:00:37.299 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 19:00:54.195 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 19:00:58.557 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 19:01:02.810 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 19:01:39.353 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 19:01:44.021 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 19:01:48.622 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 19:03:21.446 | INFO     | app.llm_runner:<module>:22 - INITIALIZED CLIENT
+2026-01-22 19:03:25.853 | INFO     | app.llm_runner:<module>:38 - INITIALIZED RAG
+2026-01-22 19:03:29.272 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 19:03:34.607 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 19:03:34.608 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 19:03:34.632 | INFO     | app.llm_runner:chat_once:107 - CALLED API MODE
+2026-01-22 19:03:35.534 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "message",\n    "message_to_patient": "Can you tell me more about your headache? Is it localized to one side of your head or is it a general headache?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 19:13:18.060 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 19:13:22.495 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 19:13:26.400 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 19:13:34.143 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 19:13:34.144 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 19:13:34.164 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 19:13:35.397 | WARNING  | app.llm_runner:chat_once:150 - Groq rejected JSON. Attempting recovery from failed_generation...
+2026-01-22 19:13:35.398 | ERROR    | app.llm_runner:parse_and_finalize:251 - JSON Error in fallback
+2026-01-22 19:17:37.825 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 19:17:41.979 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 19:17:46.114 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 19:17:46.126 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 19:17:46.128 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 19:17:46.145 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 19:17:46.686 | WARNING  | app.llm_runner:chat_once:150 - Groq rejected JSON. Attempting recovery from failed_generation...
+2026-01-22 19:17:46.687 | ERROR    | app.llm_runner:parse_and_finalize:251 - JSON Error in fallback
+2026-01-22 19:18:19.089 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 19:18:23.552 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 19:18:27.415 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 19:18:30.256 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 19:18:30.257 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 19:18:30.280 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 19:18:30.925 | WARNING  | app.llm_runner:chat_once:150 - Groq rejected JSON. Attempting recovery from failed_generation...
+2026-01-22 19:20:11.240 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 19:20:17.422 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 19:20:21.305 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 19:20:24.333 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 19:20:24.334 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 19:20:24.358 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 19:20:24.896 | WARNING  | app.llm_runner:chat_once:150 - Groq rejected JSON. Attempting recovery from failed_generation...
+2026-01-22 19:20:24.897 | ERROR    | app.llm_runner:parse_and_finalize:251 - JSON Error in fallback
+2026-01-22 19:23:58.135 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 19:24:02.293 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 19:24:06.101 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 19:24:09.814 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 19:24:09.815 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 19:24:09.837 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 19:24:10.270 | ERROR    | app.main:ask:105 - Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '[\n  {\n    "action": "message",\n    "message_to_patient": "Can you tell me more about your headache? Is it localized to one side of your head or is it a general headache?",\n    "report_data": null\n  }\n]'}}
+2026-01-22 20:18:55.329 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:19:00.014 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:19:02.479 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:19:06.418 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:19:06.419 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:19:06.431 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:19:06.561 | ERROR    | app.llm_runner:chat_once:149 - API Error: Error code: 400 - {'error': {'message': 'invalid JSON schema for tool provide_response, tools[1].function.parameters: jsonschema file:///home/di/params.json compilation failed: file:///home/di/params.json#/$defs/MedicalReport not found', 'type': 'invalid_request_error', 'param': 'tool provide_response, tools[1].function.parameters'}}
+2026-01-22 20:19:06.561 | ERROR    | app.main:ask:101 - ToolError
+2026-01-22 20:27:03.267 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:27:06.719 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:27:09.156 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:27:11.788 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:27:11.789 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:27:11.800 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:27:11.801 | INFO     | app.llm_runner:chat_once:130 - [{'role': 'system', 'content': '\nYou are an expert AI Medical Assistant.\nYour goal is to gather enough information to generate a preliminary diagnosis report.\n\nLOGIC:\n1. Analyze the patient\'s input.\n2. If the description is vague (e.g., just "my leg hurts"), DO NOT GUESS.\n3. Instead, ASK follow-up questions (e.g., "Is it swollen?", "Did you injure it?", "Please upload a photo").\n4. ONLY when you have sufficient details (symptoms, duration, visual confirmation if needed), generate the final report.\n\nINSTRUCTIONS FOR IMAGE ANALYSIS (if image is present):\n- Look for visual signs such as: redness, swelling, rashes, discoloration, wounds, or structural abnormalities.\n- Correlate visual findings with the text description.\n\nCRITICAL INSTRUCTION:\nYou are NOT allowed to output normal text.\nYou MUST use the `provide_response` tool to send your output to the user.\n- To ask a question: Call `provide_response` with action="message".\n- To give a diagnosis: Call `provide_response` with action="final_report".\n\nCONSTRAINTS:\n- If the image is unclear or irrelevant, mention this in the "ai_diagnosis_suggestion".\n- If symptoms are insufficient, set a low "confidence_score" (e.g., 0.2).\n'}, {'role': 'user', 'content': [{'type': 'text', 'text': 'RAG Context:\n[Source: medical_rag_pubmed.csv] Influenza: symptoms include fever, muscle aches, fatigue.\n\n[Source: medical_rag_pubmed.csv] COVID-19: symptoms include fever, cough, loss of taste.\n\n[Source: medical_rag_pubmed.csv] Sinusitis: symptoms include facial pain, nasal congestion, headache.\n\n[Source: medical_rag_enriched.csv] Description of the disease: Meningitis: Inflammation of the protective membranes covering the brain and spinal cord. Can be viral, bacterial, or fungal. Symptoms include sudden high fever, stiff neck, and severe headache. Diagnosis is via Lumbar Puncture (spinal tap) to analyze CSF. Treatment depends on cause; bacterial meningitis is a medical emergency requiring intravenous antibiotics and corticosteroids.\nRecommended specialist: Neurologist.\n\n[Source: medical_rag_enriched.csv] Description of the disease: Acute Sinusitis: Inflammation or swelling of the tissue lining the sinuses. Often caused by the common cold (viral) or bacterial infection. Symptoms include thick yellow/green nasal discharge, nasal congestion, pain/tenderness around eyes and cheeks, and headache. Diagnosis is clinical; CT scans are used for chronic cases. Treatment involves saline irrigation, nasal corticosteroids, and antibiotics if symptoms persist beyond 10 days.\nRecommended specialist: Otolaryngologist.\n\nPatient Description:\nI have had a severe headache and fever for 2 days.'}]}]
+2026-01-22 20:27:12.043 | ERROR    | app.llm_runner:chat_once:149 - API Error: Error code: 400 - {'error': {'message': 'invalid JSON schema for tool provide_response, tools[1].function.parameters: jsonschema file:///home/di/params.json compilation failed: file:///home/di/params.json#/$defs/MedicalReport not found', 'type': 'invalid_request_error', 'param': 'tool provide_response, tools[1].function.parameters'}}
+2026-01-22 20:27:12.043 | ERROR    | app.main:ask:101 - ToolError
+2026-01-22 20:27:41.333 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:27:43.718 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:27:46.166 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:31:08.678 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:31:12.583 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:31:15.072 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:31:19.159 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:31:19.160 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:31:19.169 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:31:19.770 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:31:19.771 | INFO     | app.llm_runner:chat_once:165 - ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning=None, tool_calls=[ChatCompletionMessageToolCall(id='fk8m36gey', function=Function(arguments='{"action":"message","message_to_patient":"Can you tell me more about your headache? Is it localized to one side of your head or is it a general headache? Also, have you experienced any nasal congestion or discharge?"}', name='provide_response'), type='function')])
+2026-01-22 20:31:19.771 | INFO     | app.llm_runner:chat_once:172 - EXECUTING TOOL: provide_response
+2026-01-22 20:32:55.215 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:32:59.798 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:33:02.267 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:33:08.656 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:33:08.657 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:33:08.666 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:33:09.232 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:33:09.233 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:33:09.236 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:33:09.236 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:33:09.247 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:33:09.628 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:33:09.629 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:33:09.632 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:33:09.632 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 20:33:09.634 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:33:09.634 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 20:33:09.634 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 20:33:09.637 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:33:09.637 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:33:09.651 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:33:10.139 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:33:10.139 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:33:10.142 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:33:10.142 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:33:10.155 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:33:10.456 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:33:10.456 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:34:59.734 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:35:03.804 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:35:06.422 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:35:06.427 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:35:06.428 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:35:06.438 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:35:06.891 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:35:06.891 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:35:06.895 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:35:06.895 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:35:06.906 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:35:07.182 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:35:07.183 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:35:07.189 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:35:07.189 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 20:35:07.191 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:35:07.191 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 20:35:07.192 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 20:35:07.194 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:35:07.194 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:35:07.207 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:35:07.593 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:35:07.593 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:35:07.596 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:35:07.596 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:35:07.611 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:35:08.004 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:35:08.004 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:45:59.962 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:46:03.472 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:46:06.018 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:47:56.648 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:48:00.208 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:48:02.877 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:48:36.113 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:48:39.531 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:48:42.019 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:50:09.260 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:50:12.364 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:50:13.712 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:50:14.947 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:50:16.709 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:50:19.183 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:50:19.349 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:50:19.350 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:50:19.361 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:50:20.103 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:50:20.104 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:50:20.108 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:50:20.108 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 20:50:20.111 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:50:20.111 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 20:50:20.111 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 20:50:20.115 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:50:20.115 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:50:20.126 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:50:20.707 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:50:20.707 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:51:02.102 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:51:06.379 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:51:08.780 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:51:08.938 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:51:08.939 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:51:08.951 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:51:09.767 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:51:09.767 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:52:38.457 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:52:41.606 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:52:44.039 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:52:55.457 | INFO     | app.llm_runner:<module>:23 - INITIALIZED CLIENT
+2026-01-22 20:52:59.584 | INFO     | app.llm_runner:<module>:39 - INITIALIZED RAG
+2026-01-22 20:53:02.048 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-22 20:53:04.683 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:53:04.684 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:53:04.694 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:53:06.401 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:53:06.401 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:53:06.403 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:53:06.403 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-22 20:53:06.414 | INFO     | app.llm_runner:chat_once:108 - CALLED API MODE
+2026-01-22 20:53:06.900 | INFO     | app.llm_runner:chat_once:161 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 20:53:06.900 | INFO     | app.llm_runner:chat_once:170 - EXECUTING TOOL: provide_response
+2026-01-22 20:53:06.903 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:53:06.903 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 20:53:06.905 | INFO     | app.main:ask:33 - Endpoint ask called
+2026-01-22 20:53:06.906 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 20:53:06.906 | ERROR    | app.main:ask:89 - HTTPException
+2026-01-22 21:58:12.618 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 21:58:16.698 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 21:58:19.157 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 21:58:32.653 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 21:58:36.657 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 21:58:39.113 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 21:58:52.813 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 21:58:57.935 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 21:59:00.383 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 21:59:00.548 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 21:59:00.549 | ERROR    | app.main:ask:69 - 'NoneType' object has no attribute 'content_type'
+2026-01-22 21:59:00.556 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 21:59:00.556 | ERROR    | app.main:ask:53 - HTTPException
+2026-01-22 21:59:00.559 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 21:59:00.560 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 21:59:00.560 | ERROR    | app.main:ask:53 - HTTPException
+2026-01-22 22:01:27.672 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:01:32.152 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:01:34.599 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:01:34.764 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:01:34.764 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:01:34.776 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-22 22:01:35.335 | INFO     | app.llm_runner:chat_once:114 - MODEL REQUESTED 1 TOOL(S)
+2026-01-22 22:01:35.335 | INFO     | app.llm_runner:_execute_tool_call:206 - EXECUTING TOOL: provide_response
+2026-01-22 22:01:35.339 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:01:35.339 | ERROR    | app.main:ask:55 - HTTPException
+2026-01-22 22:01:35.343 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:01:35.344 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 22:01:35.344 | ERROR    | app.main:ask:55 - HTTPException
+2026-01-22 22:01:53.988 | INFO     | app.llm_runner:<module>:29 - INITIALIZED CLIENT
+2026-01-22 22:01:57.649 | INFO     | app.llm_runner:<module>:41 - INITIALIZED RAG
+2026-01-22 22:02:00.062 | INFO     | app.llm_runner:<module>:49 - LOADED RAG CSV
+2026-01-22 22:02:00.226 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:02:00.227 | WARNING  | app.llm_runner:run_with_retry_chat:56 - CALLED run_with_retry_chat 1 time
+2026-01-22 22:02:00.239 | INFO     | app.llm_runner:_run_local_mode:141 - CALLED LOCAL MODE
+2026-01-22 22:02:06.600 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:02:06.601 | ERROR    | app.main:ask:55 - HTTPException
+2026-01-22 22:02:06.604 | INFO     | app.main:ask:34 - Endpoint ask called
+2026-01-22 22:02:06.605 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
+2026-01-22 22:02:06.605 | ERROR    | app.main:ask:55 - HTTPException

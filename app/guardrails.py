@@ -22,16 +22,15 @@ def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def guard_input(text: str) :
-    for item in text:
-        if re.search(PATH_TRAVERSAL_PATTERN, item):
-            logger.error("PATH_TRAVERSAL_PATTERN DETECTED")
-            raise SecurityBlocked("Path traversal detected")
+def guard_input(text: str):
+    if re.search(PATH_TRAVERSAL_PATTERN, text):
+        logger.error("PATH_TRAVERSAL_PATTERN DETECTED")
+        raise SecurityBlocked("Path traversal detected")
 
-        norm_item = normalize(item)
-        score = sum(bool(re.search(p, norm_item)) for p in INJECTION_PATTERNS)
-        if score >= 2:
-            raise SecurityBlocked("Prompt injection detected")
+    norm_item = normalize(text)
+    score = sum(bool(re.search(p, norm_item)) for p in INJECTION_PATTERNS)
+    if score >= 2:
+        raise SecurityBlocked("Prompt injection detected")
 
 
 def scrub_output(data, max_items: int = 3):

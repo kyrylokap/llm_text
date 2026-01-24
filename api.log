@@ -905,3 +905,179 @@
 2026-01-22 23:05:08.319 | INFO     | app.main:ask:34 - Endpoint ask called
 2026-01-22 23:05:08.320 | ERROR    | app.guardrails:guard_input:27 - PATH_TRAVERSAL_PATTERN DETECTED
 2026-01-22 23:05:08.320 | ERROR    | app.main:ask:53 - HTTPException
+2026-01-23 13:36:38.697 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 13:36:42.264 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 13:36:46.617 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 13:37:33.784 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:37:33.785 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:37:33.813 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:37:35.085 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:37:35.085 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:39:38.784 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:39:38.784 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:39:38.817 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:39:39.584 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:39:39.584 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:43:00.124 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:43:00.125 | INFO     | app.main:_process_uploaded_images:87 - Processing image: gardlo.jpeg
+2026-01-23 13:43:00.125 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:43:00.149 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:43:00.149 | INFO     | app.llm_runner:_build_api_messages:189 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 13:43:01.007 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:43:01.008 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:43:52.164 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:43:52.164 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:43:52.188 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:43:53.230 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:43:53.230 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:46:07.205 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:46:07.206 | INFO     | app.main:_process_uploaded_images:87 - Processing image: arm.jpeg
+2026-01-23 13:46:07.206 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:46:07.230 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:46:07.230 | INFO     | app.llm_runner:_build_api_messages:189 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 13:46:07.785 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:46:07.786 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:46:50.091 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:46:50.092 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:46:50.115 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:46:50.798 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:46:50.798 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:48:05.524 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:48:05.524 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:48:05.547 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:48:06.262 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:48:06.262 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:48:59.325 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:48:59.325 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:48:59.347 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:49:00.228 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:49:00.229 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:49:51.443 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:49:51.443 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:49:51.470 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:49:51.926 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:49:51.926 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:51:10.533 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:51:10.533 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:51:10.556 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:51:12.227 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:51:12.227 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:51:24.717 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:51:24.717 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:51:24.740 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:51:26.147 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:51:26.148 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:51:33.069 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:51:33.069 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:51:33.089 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:51:33.932 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:51:33.932 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:52:06.470 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:52:06.470 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:52:06.490 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:52:07.114 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:52:07.114 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 13:52:35.813 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 13:52:35.813 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 13:52:35.845 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 13:52:36.806 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 13:52:36.807 | INFO     | app.llm_runner:_execute_tool_call:219 - EXECUTING TOOL: provide_response
+2026-01-23 14:01:53.503 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:01:57.141 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:02:01.819 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:09:22.132 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:09:26.168 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:09:30.205 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:09:42.836 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:09:42.837 | INFO     | app.main:_process_uploaded_images:87 - Processing image: eduroam_8081.txt
+2026-01-23 14:09:42.838 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:09:42.838 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:09:42.838 | INFO     | app.llm_runner:_build_api_messages:191 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 14:09:43.179 | ERROR    | app.llm_runner:chat_once:102 - API Error: Error code: 400 - {'error': {'message': 'invalid image data', 'type': 'invalid_request_error'}}
+2026-01-23 14:09:43.179 | ERROR    | app.main:ask:73 - ToolError
+2026-01-23 14:09:52.899 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:09:52.899 | INFO     | app.main:_process_uploaded_images:87 - Processing image: gardlo.jpeg
+2026-01-23 14:09:52.900 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:09:52.900 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:09:52.900 | INFO     | app.llm_runner:_build_api_messages:191 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 14:09:53.427 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:09:53.427 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response
+2026-01-23 14:10:24.903 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:10:24.903 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:10:24.904 | INFO     | app.llm_runner:_get_rag_context:133 - CALLED RAG QUERY
+2026-01-23 14:10:24.926 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:10:25.560 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:10:25.560 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response
+2026-01-23 14:11:01.099 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:11:01.099 | INFO     | app.main:_process_uploaded_images:87 - Processing image: gardlo.jpeg
+2026-01-23 14:11:01.100 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:11:01.100 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:11:01.100 | INFO     | app.llm_runner:_build_api_messages:191 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 14:11:02.731 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:11:02.732 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response
+2026-01-23 14:11:12.754 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:11:12.754 | INFO     | app.main:_process_uploaded_images:87 - Processing image: gardlo.jpeg
+2026-01-23 14:11:12.755 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:11:12.755 | INFO     | app.llm_runner:_get_rag_context:133 - CALLED RAG QUERY
+2026-01-23 14:11:12.776 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:11:12.777 | INFO     | app.llm_runner:_build_api_messages:191 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 14:11:13.586 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:11:13.586 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response
+2026-01-23 14:12:57.104 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:12:57.105 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:12:57.105 | INFO     | app.llm_runner:_get_rag_context:133 - CALLED RAG QUERY
+2026-01-23 14:12:57.124 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:12:57.547 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:12:57.547 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response
+2026-01-23 14:14:49.645 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:14:49.645 | INFO     | app.main:_process_uploaded_images:87 - Processing image: gardlo.jpeg
+2026-01-23 14:14:49.645 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:14:49.645 | INFO     | app.llm_runner:_get_rag_context:133 - CALLED RAG QUERY
+2026-01-23 14:14:49.666 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:14:49.666 | INFO     | app.llm_runner:_build_api_messages:191 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 14:14:50.675 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:14:50.676 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response
+2026-01-23 14:17:08.854 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:17:11.810 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:17:15.770 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:17:43.067 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:17:46.703 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:17:50.883 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:17:58.384 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:18:00.523 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:18:05.501 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:19:59.192 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:20:02.589 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:20:06.572 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:22:45.207 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:22:49.810 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:22:53.551 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:23:27.984 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:23:30.907 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:23:34.718 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:24:01.623 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:24:05.387 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:24:09.113 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:24:22.560 | INFO     | app.llm_runner:<module>:30 - INITIALIZED CLIENT
+2026-01-23 14:24:24.941 | INFO     | app.llm_runner:<module>:42 - INITIALIZED RAG
+2026-01-23 14:24:28.820 | INFO     | app.llm_runner:<module>:50 - LOADED RAG CSV
+2026-01-23 14:24:54.268 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:24:54.269 | INFO     | app.main:_process_uploaded_images:87 - Processing image: gardlo.jpeg
+2026-01-23 14:24:54.270 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:24:54.270 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:24:54.271 | INFO     | app.llm_runner:_build_api_messages:191 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 14:24:55.477 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:24:55.477 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response
+2026-01-23 14:25:13.107 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:25:13.108 | INFO     | app.main:_process_uploaded_images:87 - Processing image: eduroam_8081.txt
+2026-01-23 14:25:13.108 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:25:13.108 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:25:13.108 | INFO     | app.llm_runner:_build_api_messages:191 - ATTACHING IMAGES TO LLM REQUEST
+2026-01-23 14:25:13.375 | ERROR    | app.llm_runner:chat_once:102 - API Error: Error code: 400 - {'error': {'message': 'invalid image data', 'type': 'invalid_request_error'}}
+2026-01-23 14:25:13.375 | ERROR    | app.main:ask:73 - ToolError
+2026-01-23 14:45:18.825 | INFO     | app.main:ask:42 - Endpoint ask called
+2026-01-23 14:45:18.825 | WARNING  | app.llm_runner:run_with_retry_chat:57 - CALLED run_with_retry_chat 1 time
+2026-01-23 14:45:18.825 | INFO     | app.llm_runner:_get_rag_context:133 - CALLED RAG QUERY
+2026-01-23 14:45:18.837 | INFO     | app.llm_runner:chat_once:81 - CALLED API MODE
+2026-01-23 14:45:19.861 | INFO     | app.llm_runner:chat_once:115 - MODEL REQUESTED 1 TOOL(S)
+2026-01-23 14:45:19.862 | INFO     | app.llm_runner:_execute_tool_call:221 - EXECUTING TOOL: provide_response

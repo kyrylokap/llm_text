@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from json import JSONDecodeError
 from .errors import ToolError, ValidationError, EmptyModelOutput
-from .prompts import MEDICAL_PROMPT, MEDICAL_PROMPT_VISION
+from .prompts import LOCAL_MEDICAL_PROMPT, API_MEDICAL_PROMPT
 from .tools import TOOLS
 from .dispatcher import execute_tool
 from .rag import MiniRAG
@@ -96,7 +96,7 @@ def chat_once(
                 tools=tools_payload,
                 tool_choice="auto" if tools_payload else None,
                 timeout=30,
-                temperature=0.1,
+                temperature=0.3,
             )
         except Exception as e:
             logger.error(f"API Error: {e}")
@@ -130,6 +130,8 @@ def _get_rag_context(message: str, k: int) -> str:
     if not message:
         return ""
 
+    logger.info("CALLED RAG QUERY")
+
     context_docs = rag.query(message, k=k)
     rag_text_parts = [
         f"[Source: {doc['source']}] {doc['text']}"
@@ -141,18 +143,19 @@ def _get_rag_context(message: str, k: int) -> str:
 def _run_local_mode(current_message: str, rag_text: str) -> Dict[str, Any]:
     logger.info("CALLED LOCAL MODE")
 
-    full_prompt = (
-        f"{MEDICAL_PROMPT}\n"
-        f"RAG Context:\n{rag_text}\n"
-        f"Patient Description:\n{current_message}"
+    full_prompt = LOCAL_MEDICAL_PROMPT.format(
+        rag_text=rag_text,
+        current_message=current_message
     )
+
     try:
         out = local_gen(
             full_prompt,
             max_new_tokens=120,
-            temperature=0.2,
+            temperature=0.3,
             pad_token_id=tokenizer.eos_token_id,
             return_full_text=False,
+            do_sample=True,
         )
 
         text = out[0]["generated_text"].strip()
@@ -176,7 +179,7 @@ def _build_api_messages(
         rag_text: str,
         images_list: List[Dict[str, str]],
 ) -> List[Dict[str, Any]]:
-    messages = [{"role": "system", "content": MEDICAL_PROMPT_VISION}]
+    messages = [{"role": "system", "content": API_MEDICAL_PROMPT}]
 
     for msg in history:
         messages.append({"role": msg.role, "content": str(msg.content)})

@@ -5,15 +5,16 @@ import pandas as pd
 
 class MedicalReport(BaseModel):
     summary: str = Field(..., description="A brief summary of the patient's reported condition and history")
-    reported_symptoms: List[str] = Field(..., description="List of symptoms extracted from the patient's description")
+    reported_symptoms: str = Field(...,description="String containing symptoms extracted from the patient's description, "
+                                                   "separated by commas (e.g. 'fever, headache, fatigue')." )
     duration: str = Field(..., description="Duration of symptoms as reported by the patient (e.g., '2 days', 'since yesterday')")
     ai_diagnosis_suggestion: str = Field(..., description="Primary preliminary diagnosis suggestion based on the analysis")
-    recommended_specialization: List[str] = Field(..., description="List of recommended medical specialists (e.g.,"
+    ai_recommended_specializations: List[str] = Field(..., description="List of recommended medical specialists (e.g.,"
                                                                    " 'Dermatologist', 'General Practitioner')")
-    confidence_score: float = Field(...,description="Confidence score of the assessment ranging from "
+    ai_confidence_score: float = Field(..., description="Confidence score of the assessment ranging from "
                                                     "0.0 (uncertain) to 1.0 (highly confident)",
-                                    ge=0.0,
-                                    le=1.0)
+                                       ge=0.0,
+                                       le=1.0)
 
 
 class ResponseArgs(BaseModel):

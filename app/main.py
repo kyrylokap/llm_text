@@ -3,6 +3,7 @@ import json
 
 from json import JSONDecodeError
 from typing import Optional, List, Dict, Any
+from fastapi.middleware.cors import CORSMiddleware
 from .errors import ToolError, ToolTimeout, InvalidHistoryFormatError, ImageProcessingError
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from .guardrails import guard_input, scrub_output
@@ -16,6 +17,13 @@ from .app_logging import logger
 
 app = FastAPI(title="Groq Hosted Model API")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def root():
@@ -24,7 +32,7 @@ def root():
 
 @app.post("/ask")
 async def ask(
-        message: str = Form(...),
+        message: str = Form(""),
         history: str = Form("[]"),
         images: Optional[List[UploadFile]] = File(None),
         k: int = Form(5),

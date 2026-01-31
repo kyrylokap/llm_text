@@ -12,8 +12,13 @@ from .errors import ToolError, ValidationError, EmptyModelOutput
 from .prompts import LOCAL_MEDICAL_PROMPT, API_MEDICAL_PROMPT
 from .tools import TOOLS
 from .dispatcher import execute_tool
-from .rag import MiniRAG
+from .rag import get_rag_service
 from .app_logging import logger
+
+
+MAX_CONTEXT_TOKENS = 2000
+CHARS_PER_TOKEN = 4
+MAX_CONTEXT_CHARS = MAX_CONTEXT_TOKENS * CHARS_PER_TOKEN
 
 
 class ChatMessage(BaseModel):
@@ -27,7 +32,7 @@ MODEL_NAME = os.getenv("MODEL_NAME")
 LOCAL_MODEL_NAME = "EleutherAI/gpt-neo-125M"
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-logger.info("INITIALIZED CLIENT")
+logger.info("[INFO] INITIALIZED CLIENT")
 
 tokenizer = AutoTokenizer.from_pretrained(LOCAL_MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(LOCAL_MODEL_NAME)
@@ -38,24 +43,15 @@ local_gen = pipeline(
     device=-1
 )
 
-rag = MiniRAG()
-logger.info("INITIALIZED RAG")
-rag.load_csv(
-    path="medical_rag_pubmed.csv",
-    text_columns=["text"],
-)
-rag.load_enriched_csv(
-    path="medical_rag_enriched.csv"
-)
-logger.info("LOADED RAG CSV")
+rag = get_rag_service()
 
 
-def run_with_retry_chat(current_message: str, **kwargs):
+async def run_with_retry_chat(current_message: str, **kwargs):
     last_exception = None
     for i in range(2):
         try:
-            logger.warning(f"CALLED run_with_retry_chat {i + 1} time")
-            return chat_once(current_message, **kwargs)
+            logger.warning(f"[WARN] CALLED run_with_retry_chat {i + 1} time")
+            return await chat_once(current_message, **kwargs)
         except EmptyModelOutput as e:
             logger.error("EmptyModelOutput detected")
             last_exception = e
@@ -65,7 +61,7 @@ def run_with_retry_chat(current_message: str, **kwargs):
         raise last_exception
 
 
-def chat_once(
+async def chat_once(
         current_message,
         history: List[ChatMessage],
         images_list: List[Dict[str, str]] = None,
@@ -78,7 +74,7 @@ def chat_once(
     if api_mode == "local":
         return _run_local_mode(current_message, rag_text)
 
-    logger.info("CALLED API MODE")
+    logger.info("[INFO] CALLED API MODE")
     messages = _build_api_messages(history, current_message, rag_text, images_list)
 
     MAX_TURNS = 3
@@ -88,36 +84,44 @@ def chat_once(
         current_turn += 1
 
         tools_payload = _build_tools_payload(use_functions)
+        tool_choice_strategy = None
+        if tools_payload:
+            has_response_tool = any(tool['function']['name'] == 'provide_response' for tool in tools_payload)
+
+            if has_response_tool:
+                tool_choice_strategy = {"type": "function", "function": {"name": "provide_response"}}
+            else:
+                tool_choice_strategy = "auto"
 
         try:
             response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=messages,
                 tools=tools_payload,
-                tool_choice="auto" if tools_payload else None,
+                tool_choice=tool_choice_strategy,
                 timeout=30,
                 temperature=0.3,
             )
         except Exception as e:
-            logger.error(f"API Error: {e}")
+            logger.error(f"[ERROR] API Error: {e}")
             raise ToolError(f"Provider Error: {e}")
 
         response_message = response.choices[0].message
         tool_calls = response_message.tool_calls
 
         if not tool_calls:
-            logger.warning("Model didn't use tool, falling back to text content")
+            logger.warning("[WARN] Model didn't use tool, falling back to text content")
             return {
                 "type": "chat",
                 "message": response_message.content or "I couldn't generate a structured response.",
             }
 
-        logger.info(f"MODEL REQUESTED {len(tool_calls)} TOOL(S)")
+        logger.info(f"[INFO] MODEL REQUESTED {len(tool_calls)} TOOL(S)")
 
-        messages.append(response_message)
+        messages.append(response_message.model_dump())
 
         for tool_call in tool_calls:
-            execution_result = _execute_tool_call(tool_call, messages)
+            execution_result = await _execute_tool_call(tool_call, messages)
 
             if execution_result.get("is_final"):
                 return _handle_special_tool_response(
@@ -132,11 +136,30 @@ def _get_rag_context(message: str, k: int) -> str:
 
     logger.info("CALLED RAG QUERY")
 
-    context_docs = rag.query(message, k=k)
-    rag_text_parts = [
-        f"[Source: {doc['source']}] {doc['text']}"
-        for doc in context_docs
-    ]
+    context_docs = rag.query(message, k=k * 2)
+
+    rag_text_parts = []
+    current_char_count = 0
+
+    for doc in context_docs:
+        formatted_chunk = (
+            f"--- DOCUMENT ID: {doc['original_id']} ---\n"
+            f"SOURCE: {doc['source']}\n"
+            f"CONTENT:\n{doc['text']}\n"
+        )
+
+        chunk_len = len(formatted_chunk)
+
+        if current_char_count + chunk_len > MAX_CONTEXT_CHARS:
+            logger.warning(
+                f"[WARN] Context limit reached! Stopping at {len(rag_text_parts)} docs "
+                f"({current_char_count} chars). Ignored remaining candidates."
+            )
+            break
+
+        rag_text_parts.append(formatted_chunk)
+        current_char_count += chunk_len
+
     return "\n\n".join(rag_text_parts)
 
 
@@ -160,11 +183,11 @@ def _run_local_mode(current_message: str, rag_text: str) -> Dict[str, Any]:
 
         text = out[0]["generated_text"].strip()
     except Exception as e:
-        logger.error(f"Local Model Error: {e}")
+        logger.error(f"[ERROR] Local Model Error: {e}")
         text = "I apologize, I am unable to process this request locally."
 
     if not text:
-        logger.error("EmptyModelOutput")
+        logger.error("[ERROR] EmptyModelOutput")
         raise EmptyModelOutput()
 
     return {
@@ -213,26 +236,26 @@ def _build_tools_payload(use_functions: bool) -> Optional[List[dict]]:
     return active_tools if active_tools else None
 
 
-def _execute_tool_call(tool_call, messages: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+async def _execute_tool_call(tool_call, messages: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     fn_name = tool_call.function.name
     fn_args_json = tool_call.function.arguments
     call_id = tool_call.id
 
-    logger.info(f"EXECUTING TOOL: {fn_name}")
+    logger.info(f"[INFO] EXECUTING TOOL: {fn_name}")
 
     try:
         args = json.loads(fn_args_json)
     except JSONDecodeError:
-        logger.error(f"ValidationError: Invalid JSON args for {fn_name}")
+        logger.error(f"[ERROR] ValidationError: Invalid JSON args for {fn_name}")
         raise ValidationError("Function call arguments must be valid JSON")
 
     if fn_name == "provide_response":
         return {"is_final": True, "args": args}
 
-    tool_result = execute_tool(fn_name, args)
+    tool_result = await execute_tool(fn_name, args)
 
     if "error" in tool_result:
-        logger.error(f"ToolError in {fn_name}")
+        logger.error(f"[ERROR] ToolError in {fn_name}")
         raise ToolError(tool_result["error"])
 
     messages.append({

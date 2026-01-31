@@ -2,7 +2,7 @@ import base64
 import json
 
 from json import JSONDecodeError
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Annotated
 from fastapi.middleware.cors import CORSMiddleware
 from .errors import ToolError, ToolTimeout, InvalidHistoryFormatError, ImageProcessingError
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
@@ -19,11 +19,18 @@ app = FastAPI(title="Groq Hosted Model API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+MAX_MESSAGE_LENGTH = 2000
+MAX_HISTORY_LENGTH = 10000
+MAX_K_RETRIEVAL = 10
+
+
 
 @app.get("/")
 def root():
@@ -32,10 +39,10 @@ def root():
 
 @app.post("/ask")
 async def ask(
-        message: str = Form(""),
-        history: str = Form("[]"),
+        message: Annotated[str, Form(min_length=1, max_length=MAX_MESSAGE_LENGTH)],
+        history: Annotated[str, Form(max_length=MAX_HISTORY_LENGTH)] = "[]",
         images: Optional[List[UploadFile]] = File(None),
-        k: int = Form(5),
+        k: Annotated[int, Form(ge=1, le=MAX_K_RETRIEVAL)] = 5,
         mode: str = Form("api"),
         use_functions: bool = Form(True)
 ):
@@ -47,7 +54,7 @@ async def ask(
 
         guard_input(message)
 
-        result = run_with_retry_chat(
+        result = await run_with_retry_chat(
             current_message=message,
             use_functions=use_functions,
             history=chat_history,

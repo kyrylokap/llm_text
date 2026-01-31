@@ -1,7 +1,8 @@
+import asyncio
 import concurrent.futures
 from .tools import TOOLS
 
-def execute_tool(name: str, arguments: dict, timeout: int = 3):
+async def execute_tool(name: str, arguments: dict, timeout: int = 3):
     if name not in TOOLS:
         return {"error": "tool_not_allowed"}
 
@@ -17,7 +18,7 @@ def execute_tool(name: str, arguments: dict, timeout: int = 3):
     with concurrent.futures.ThreadPoolExecutor() as executor:
         future = executor.submit(lambda: impl(**validated.dict()))
         try:
-            result = future.result(timeout=timeout)
+            result = await asyncio.to_thread(impl, **validated.dict())
             return {"ok": True, "result": result}
         except concurrent.futures.TimeoutError:
             return {"error": "timeout"}
